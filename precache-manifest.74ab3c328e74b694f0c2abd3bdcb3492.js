@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd53cfa4f05a5e8dbe6374c9a46b5f8d",
+    "revision": "e2b2b3040c9a24c5a40a589a18f2f878",
     "url": "/taodsite/index.html"
   },
   {
-    "revision": "ec3462752ccb44744c04",
+    "revision": "ebbe101a3e8950058f49",
     "url": "/taodsite/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taodsite/static/js/2.8b537c1a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec3462752ccb44744c04",
-    "url": "/taodsite/static/js/main.a998bf4d.chunk.js"
+    "revision": "ebbe101a3e8950058f49",
+    "url": "/taodsite/static/js/main.a4155c3d.chunk.js"
   },
   {
     "revision": "c98ffe7d5e88af4f084f",
