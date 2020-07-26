@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/taodsite/static/css/main.5f361e03.chunk.css",
+    "main.js": "/taodsite/static/js/main.a998bf4d.chunk.js",
+    "main.js.map": "/taodsite/static/js/main.a998bf4d.chunk.js.map",
+    "runtime-main.js": "/taodsite/static/js/runtime-main.c2faf24c.js",
+    "runtime-main.js.map": "/taodsite/static/js/runtime-main.c2faf24c.js.map",
+    "static/js/2.8b537c1a.chunk.js": "/taodsite/static/js/2.8b537c1a.chunk.js",
+    "static/js/2.8b537c1a.chunk.js.map": "/taodsite/static/js/2.8b537c1a.chunk.js.map",
+    "index.html": "/taodsite/index.html",
+    "precache-manifest.6daf452837ccedb3beaafc6473f9ead5.js": "/taodsite/precache-manifest.6daf452837ccedb3beaafc6473f9ead5.js",
+    "service-worker.js": "/taodsite/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/taodsite/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8b537c1a.chunk.js.LICENSE.txt": "/taodsite/static/js/2.8b537c1a.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/taodsite/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2faf24c.js",
+    "static/js/2.8b537c1a.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.a998bf4d.chunk.js"
+  ]
+}
