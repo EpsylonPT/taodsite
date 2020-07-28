@@ -13,6 +13,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
+import HeaderBrand from "components/Header/HeaderBrand.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
@@ -31,10 +32,11 @@ export default function LandingPage(props) {
   const { ...rest } = props;
   return (
     <div>
+  
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Material Kit React"
+        brand="Tuna Académica de Oliveira do Douro"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
