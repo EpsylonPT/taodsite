@@ -36,23 +36,16 @@ export default function HeaderLinks(props) {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
+            <Link to="/cancioneiro" className={classes.dropdownLink}>
+              Cancioneiro
+            </Link>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
+          id="facebook-tooltip"
+          title="Siga-nos no Facebook"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -69,7 +62,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Follow us on instagram"
+          title="Siga-nos no Instagram"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -85,8 +78,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on Youtube"
+          id="youtube-tooltip"
+          title="Siga-nos no Youtube"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -97,6 +90,23 @@ export default function HeaderLinks(props) {
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " fab fa-youtube"} />
+          </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="spotify-tooltip"
+          title="Siga-nos no Spotify"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            href="https://open.spotify.com/artist/1FTrFPaGDJL5BJkZWuMErD?si=hAluQBz2RRKTmvWC1po-xg"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={classes.socialIcons + " fab fa-spotify"} />
           </Button>
         </Tooltip>
       </ListItem>
