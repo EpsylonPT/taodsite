@@ -10,11 +10,13 @@ import CancioneiroPage from "views/CancioneiroPage/CancioneiroPage.js";
 
 var hist = createBrowserHistory();
 
+var mainLink = "/taodsite"
+
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/cancioneiro" component={CancioneiroPage} />
-      <Route path="/" component={LandingPage} />
+      <Route path={mainLink} component={LandingPage} />
     </Switch>
   </Router>,
   document.getElementById("root")
