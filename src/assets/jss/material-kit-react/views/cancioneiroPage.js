@@ -1,6 +1,6 @@
 import { container } from "assets/jss/material-kit-react.js";
 
-const signupPageStyle = {
+const cancioneiroPageStyle = {
   container: {
     ...container,
     zIndex: "2",
@@ -52,8 +52,7 @@ const signupPageStyle = {
     textAlign: "center",
     marginLeft: "20px",
     marginRight: "20px",
-    marginTop: "-40px",
-    padding: "20px 0",
+    marginTop: "20px",
     marginBottom: "15px"
   },
   socialIcons: {
@@ -88,4 +87,4 @@ const signupPageStyle = {
   }
 };
 
-export default signupPageStyle;
+export default cancioneiroPageStyle;
