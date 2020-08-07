@@ -78,34 +78,37 @@ export default function MusicaCard(props) {
         )
     })
 
-    var spotify;
+    var spotifyHeader = (<i/>)
+    var spotifyButton = (<i/>)
     const spotify_link = musica.spotify;
     if (spotify_link != "") {
-        spotify = (
+        spotifyHeader = (
             <i className={classes.socialIcons + " fab fa-spotify"} />
         )
-    }
-    else{
-        spotify = (
-            <i/>
+        spotifyButton = (
+            <SpotifyButton
+                href={spotify_link}
+                endIcon={<i className={classes.socialIcons + " fab fa-spotify"} />}
+            >
+                Spotify
+            </SpotifyButton>
         )
     }
-    console.log(spotify_link)
     return (
         <GridItem xs={12} sm={12} md={4} id={"gridItem_" + nome}>
             <Card className={classes[cardAnimaton]} id={"card_" + nome}>
                 <button onClick={() => handleDialogOpen("ax", "asx", "asd", "asd")}>
                     <div style={textStyle}>
-                        {nome} {spotify}
+                        {nome} {spotifyHeader}
                     </div>
                 </button>
                 <Dialog id={"modal"}
                     open={isOpen}
-                    style={{ backgroundColor: 'transparent'}}
+                    style={{ backgroundColor: 'transparent' }}
                     onClose={handleDialogClose}
                     aria-labelledby="modal-slide-title"
                     aria-describedby="modal-slide-description"
-                    fullWidth= "sm"
+                    fullWidth="sm"
                     maxWidth="sm"
                     overlayStyle={{ backgroundColor: 'transparent' }
                     }
@@ -116,12 +119,7 @@ export default function MusicaCard(props) {
                     >
                         <h3> <b>{nome}</b> </h3>
                     </DialogTitle>
-                    <SpotifyButton
-                        href={spotify_link}
-                        endIcon={<i className={classes.socialIcons + " fab fa-spotify"} />}
-                    >
-                        Spotify
-                    </SpotifyButton>
+                    {spotifyButton}
                     <DialogContent dividers
                         id="modal-slide-description"
                         className={classes.modalBody}
