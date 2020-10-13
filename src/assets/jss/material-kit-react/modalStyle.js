@@ -4,10 +4,10 @@ const modalStyle = {
   },
   modalHeader: {
     borderBottom: "none",
-    paddingTop: "24px",
-    paddingRight: "24px",
+    paddingTop: "100px",
+    paddingRight: "100px",
     paddingBottom: "0",
-    paddingLeft: "24px",
+    paddingLeft: "100px",
     minHeight: "16.43px"
   },
   modalTitle: {
@@ -16,7 +16,8 @@ const modalStyle = {
   },
   modalCloseButton: {
     color: "#999999",
-    marginTop: "-12px",
+    marginTop: "-15%",
+    marginLeft: "15%",
     WebkitAppearance: "none",
     padding: "0",
     cursor: "pointer",

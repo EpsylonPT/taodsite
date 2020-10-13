@@ -3,36 +3,40 @@ import React from "react";
 import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 
 // core components
-import Slide from "@material-ui/core/Slide";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
-import IconButton from "@material-ui/core/IconButton";
-// @material-ui/icons
-import Close from "@material-ui/icons/Close";
-import "./PremiosButton.css"
+import { Link } from "react-router-dom";
+import HeaderPage from "views/HeaderPage.js";
+import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import image from "assets/img/bg7.jpg";
 
-import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 import Button from "components/CustomButtons/Button.js";
+import modalStyle from "assets/jss/material-kit-react/modalStyle";
+import sobrenosStyles from "assets/jss/material-kit-react/views/sobrenosPage.js";
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(sobrenosStyles);
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="down" ref={ref} {...props} />;
-});
 
 export default function AcercaPage(props) {
-    const [modal, setModal] = React.useState(false);
     const classes = useStyles();
     const { ...rest } = props;
     return (
-       <div>
-           <div>
-        <Button type="button" color="github" onClick={() => setModal(true)}>
-                Premios
-        </Button>
+        <div>
+            <HeaderPage change_height={50} />
+            <div
+                className={classes.pageHeader}
+                style={{
+                    backgroundImage: "url(" + image + ")",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top center"
+                }}
+            >
+                <div className={classes.container}>
+                    <GridContainer justify="center">
+                  
+                    </GridContainer>
+                </div>
+                <Footer whiteFont />
+            </div>
         </div>
-       </div> 
     )
 }
