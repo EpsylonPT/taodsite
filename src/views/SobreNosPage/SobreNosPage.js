@@ -3,17 +3,20 @@ import React from "react";
 import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 
 // core components
+
 import HeaderPage from "views/HeaderPage.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
-
+import Premios from "views/SobreNosPage/Premios.js"
 import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 
 import image from "assets/img/bg7.jpg";
+import Button from "components/CustomButtons/Button.js";
 
 import sobrenos from "sobrenos.json"
 
 const useStyles = makeStyles(styles);
+
 
 function getTextoInicial() {
     return sobrenos.textoInicial;
@@ -28,7 +31,7 @@ function getTexto() {
         )
     })
     return texto;
-}
+} 
 
 export default function AcercaPage(props) {
 
@@ -52,10 +55,11 @@ export default function AcercaPage(props) {
                     <GridContainer justify="center">
                         {textoinit}
                     </GridContainer>
-                    <h3/>
+                    <h3 />
                     <p>
                         {texto}
                     </p>
+                    <Premios/>
                 </div>
                 <Footer whiteFont />
             </div>
