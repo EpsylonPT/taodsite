@@ -1,0 +1,65 @@
+{
+    "items": [
+        {
+            "nome": "Pins",
+            "pasta": "Pins",
+            "fotos": [
+                "pins",
+                "pins2"
+            ],
+            "descricao": "Pins oficiais da Tuna Académica de Oliveira do Douro",
+            "preco": "1",
+            "preco_socio": "",
+            "olx_link": ""
+        },
+        {
+            "nome": "Emblema",
+            "pasta": "Emblema",
+            "fotos": [
+                "emblemaTAOD",
+                "emblemaTAOD2"
+            ],
+            "descricao": "",
+            "preco": "5",
+            "preco_socio": "",
+            "olx_link": ""
+        },
+        {
+            "nome": "CD",
+            "pasta": "CD",
+            "fotos": [
+                "TAOD",
+                "TAOD2"
+            ],
+            "descricao": "",
+            "preco": "7.5",
+            "preco_socio": "5",
+            "olx_link": ""
+        },
+        {
+            "nome": "DVD - 6º Tunas D'Ouro",
+            "pasta": "DVD",
+            "fotos": [
+                "6TunasDouro4",
+                "6TunasDouro",
+                "6TunasDouro2"
+            ],
+            "descricao": "",
+            "preco": "10",
+            "preco_socio": "",
+            "olx_link": ""
+        },
+        {
+            "nome": "DVD - XV Aniversário",
+            "pasta": "DVD",
+            "fotos": [
+                "XVAniversario",
+                "XVAniversario2"
+            ],
+            "descricao": "",
+            "preco": "10",
+            "preco_socio": "",
+            "olx_link": ""
+        }
+    ]
+}
