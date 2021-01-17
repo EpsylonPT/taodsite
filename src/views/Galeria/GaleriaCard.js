@@ -37,9 +37,9 @@ function getImages(evento) {
     return fotos;
 }
 
-export default function GaleriaPage(props) {
+export default function GaleriaCard(props) {
     const [isOpen, setIsOpen] = React.useState(false)
-    
+
     const textStyle = {
         textAlign: "center"
     };
@@ -67,10 +67,13 @@ export default function GaleriaPage(props) {
     const { evento, ...rest } = props;
     const fotos = getImages(evento);
 
-   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+    const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
     return (
         <GridItem xs={12} sm={12} md={4} id={"gridItem_" + evento}>
             <Card className={classes[cardAnimaton]} id={"card_" + evento}>
+                <Carousel {...settings} className="slick-slider">
+                    {fotos}
+                </Carousel>
                 <button onClick={() => handleDialogOpen("ax", "asx", "asd", "asd")}>
                     <div style={textStyle}>
                         {evento}
@@ -91,15 +94,15 @@ export default function GaleriaPage(props) {
                         id="modal-slide-description"
                         className={classes.modalBody}
                     >
-                    <GridContainer>
-                        <GridItem>
-                            <Card>
-                                <Carousel {...settings} className = "slick-slider">
-                                    {fotos}
-                                </Carousel>
-                            </Card>
-                        </GridItem>
-                    </GridContainer>
+                        <GridContainer>
+                            <GridItem>
+                                <Card>
+                                    <Carousel {...settings} className="slick-slider">
+                                        {fotos}
+                                    </Carousel>
+                                </Card>
+                            </GridItem>
+                        </GridContainer>
                         <p />
                     </DialogContent>
                 </Dialog >
