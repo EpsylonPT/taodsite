@@ -10,6 +10,7 @@ import Slider from "react-slick";
 
 import Card from "components/Card/Card.js";
 import "./Loja.css";
+import "assets/scss/plugins/plugin-galeria.scss";
 
 const textStyle = {
     textAlign: "center"
