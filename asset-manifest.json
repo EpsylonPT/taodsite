@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/taodsite/static/css/main.34c11c0b.chunk.css",
-    "main.js": "/taodsite/static/js/main.61717ebd.chunk.js",
-    "main.js.map": "/taodsite/static/js/main.61717ebd.chunk.js.map",
+    "main.css": "/taodsite/static/css/main.97de2020.chunk.css",
+    "main.js": "/taodsite/static/js/main.eb6b9653.chunk.js",
+    "main.js.map": "/taodsite/static/js/main.eb6b9653.chunk.js.map",
     "runtime-main.js": "/taodsite/static/js/runtime-main.c5e94ac5.js",
     "runtime-main.js.map": "/taodsite/static/js/runtime-main.c5e94ac5.js.map",
-    "static/js/2.a1bd75ce.chunk.js": "/taodsite/static/js/2.a1bd75ce.chunk.js",
-    "static/js/2.a1bd75ce.chunk.js.map": "/taodsite/static/js/2.a1bd75ce.chunk.js.map",
+    "static/js/2.6c23c52c.chunk.js": "/taodsite/static/js/2.6c23c52c.chunk.js",
+    "static/js/2.6c23c52c.chunk.js.map": "/taodsite/static/js/2.6c23c52c.chunk.js.map",
     "index.html": "/taodsite/index.html",
-    "precache-manifest.4f4be74f079b0d332183384309faaf4c.js": "/taodsite/precache-manifest.4f4be74f079b0d332183384309faaf4c.js",
+    "precache-manifest.4420b899a75d05f08b7a1afd1bbc671e.js": "/taodsite/precache-manifest.4420b899a75d05f08b7a1afd1bbc671e.js",
     "service-worker.js": "/taodsite/service-worker.js",
-    "static/css/main.34c11c0b.chunk.css.map": "/taodsite/static/css/main.34c11c0b.chunk.css.map",
-    "static/js/2.a1bd75ce.chunk.js.LICENSE.txt": "/taodsite/static/js/2.a1bd75ce.chunk.js.LICENSE.txt",
+    "static/css/main.97de2020.chunk.css.map": "/taodsite/static/css/main.97de2020.chunk.css.map",
+    "static/js/2.6c23c52c.chunk.js.LICENSE.txt": "/taodsite/static/js/2.6c23c52c.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/taodsite/static/media/1.f2cd019d.jpg",
     "static/media/10300277_797997193557839_6448900840884838097_n.jpg": "/taodsite/static/media/10300277_797997193557839_6448900840884838097_n.037869fc.jpg",
     "static/media/10325367_789226737784215_7699705597989847400_n.jpg": "/taodsite/static/media/10325367_789226737784215_7699705597989847400_n.60912c06.jpg",
@@ -139,7 +139,6 @@
     "static/media/III TuNa Praia - 2 de abril de 2017.jpg": "/taodsite/static/media/III TuNa Praia - 2 de abril de 2017.09fb94ab.jpg",
     "static/media/III_TuNa_Praia_-_1_de_abril_-_Cópia.jpg": "/taodsite/static/media/III_TuNa_Praia_-_1_de_abril_-_Cópia.793a2714.jpg",
     "static/media/IMG-20181114-WA0000.jpg": "/taodsite/static/media/IMG-20181114-WA0000.082496e7.jpg",
-    "static/media/IMG_1198.JPG.jpg": "/taodsite/static/media/IMG_1198.JPG.508534ae.jpg",
     "static/media/IMG_1272.JPG.jpg": "/taodsite/static/media/IMG_1272.JPG.652a0d06.jpg",
     "static/media/IMG_20161024_211539.jpg": "/taodsite/static/media/IMG_20161024_211539.025f2fe7.jpg",
     "static/media/IMG_20161024_211539_edited.jpg": "/taodsite/static/media/IMG_20161024_211539_edited.6b270d76.jpg",
@@ -197,8 +196,8 @@
     "static/media/goncalo_pereira.jpg": "/taodsite/static/media/goncalo_pereira.fd697c0d.jpg",
     "static/media/goncalo_valadar.jpg": "/taodsite/static/media/goncalo_valadar.e8bde4d8.jpg",
     "static/media/guedes.jpg": "/taodsite/static/media/guedes.b0e94783.jpg",
-    "static/media/guedes2.jpg": "/taodsite/static/media/guedes2.e594d4d7.jpg",
     "static/media/headerIcon.png": "/taodsite/static/media/headerIcon.ab047162.png",
+    "static/media/hugo_guedes.jpg": "/taodsite/static/media/hugo_guedes.e594d4d7.jpg",
     "static/media/ines_almeida.jpg": "/taodsite/static/media/ines_almeida.246e1147.jpg",
     "static/media/ines_dionisio.jpg": "/taodsite/static/media/ines_dionisio.009ee10b.jpg",
     "static/media/ines_ferreira.jpg": "/taodsite/static/media/ines_ferreira.4239948f.jpg",
@@ -214,6 +213,7 @@
     "static/media/lili2_edited.jpg": "/taodsite/static/media/lili2_edited.e772e834.jpg",
     "static/media/lili_edited.jpg": "/taodsite/static/media/lili_edited.386b76fb.jpg",
     "static/media/liliana_azevedo.jpg": "/taodsite/static/media/liliana_azevedo.8987638d.jpg",
+    "static/media/mafalda_silva.jpg": "/taodsite/static/media/mafalda_silva.508534ae.jpg",
     "static/media/marcelo_pereira.jpg": "/taodsite/static/media/marcelo_pereira.538f0ec0.jpg",
     "static/media/marcia.jpg": "/taodsite/static/media/marcia.bcb0ea6f.jpg",
     "static/media/marcia_pena.jpg": "/taodsite/static/media/marcia_pena.e89cc94b.jpg",
@@ -238,8 +238,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5e94ac5.js",
-    "static/js/2.a1bd75ce.chunk.js",
-    "static/css/main.34c11c0b.chunk.css",
-    "static/js/main.61717ebd.chunk.js"
+    "static/js/2.6c23c52c.chunk.js",
+    "static/css/main.97de2020.chunk.css",
+    "static/js/main.eb6b9653.chunk.js"
   ]
 }

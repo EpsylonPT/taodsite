@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d8171064bd7459aa5d865602c94e072a",
+    "revision": "6c4718c88b9f7e23dbe920f630292174",
     "url": "/taodsite/index.html"
   },
   {
-    "revision": "8e01f8a30e71de10ba99",
-    "url": "/taodsite/static/css/main.34c11c0b.chunk.css"
+    "revision": "fef131ec2e4cdde47b8a",
+    "url": "/taodsite/static/css/main.97de2020.chunk.css"
   },
   {
-    "revision": "34cd4f6ce0d55e3c2c70",
-    "url": "/taodsite/static/js/2.a1bd75ce.chunk.js"
+    "revision": "9dfb9b0f1c09b3e65945",
+    "url": "/taodsite/static/js/2.6c23c52c.chunk.js"
   },
   {
-    "revision": "39ceff715031186693259ebf7bfabe58",
-    "url": "/taodsite/static/js/2.a1bd75ce.chunk.js.LICENSE.txt"
+    "revision": "d09ac505fec0e9130a1d5b85fb3fa6dc",
+    "url": "/taodsite/static/js/2.6c23c52c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e01f8a30e71de10ba99",
-    "url": "/taodsite/static/js/main.61717ebd.chunk.js"
+    "revision": "fef131ec2e4cdde47b8a",
+    "url": "/taodsite/static/js/main.eb6b9653.chunk.js"
   },
   {
     "revision": "9b7f4289563fe7941f19",
@@ -536,10 +536,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taodsite/static/media/IMG-20181114-WA0000.082496e7.jpg"
   },
   {
-    "revision": "508534ae1ff28ce6a52ae48a687b6a07",
-    "url": "/taodsite/static/media/IMG_1198.JPG.508534ae.jpg"
-  },
-  {
     "revision": "652a0d06a747d5799ed5668b3ad4c2ce",
     "url": "/taodsite/static/media/IMG_1272.JPG.652a0d06.jpg"
   },
@@ -768,12 +764,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taodsite/static/media/guedes.b0e94783.jpg"
   },
   {
-    "revision": "e594d4d7903ff52cbcb14e69bc061a57",
-    "url": "/taodsite/static/media/guedes2.e594d4d7.jpg"
-  },
-  {
     "revision": "ab047162138d0f1321577e6e45b711e9",
     "url": "/taodsite/static/media/headerIcon.ab047162.png"
+  },
+  {
+    "revision": "e594d4d7903ff52cbcb14e69bc061a57",
+    "url": "/taodsite/static/media/hugo_guedes.e594d4d7.jpg"
   },
   {
     "revision": "246e11478a6b5048131b0e5149b81ab0",
@@ -834,6 +830,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8987638d6a87d06745180360b74b971a",
     "url": "/taodsite/static/media/liliana_azevedo.8987638d.jpg"
+  },
+  {
+    "revision": "508534ae1ff28ce6a52ae48a687b6a07",
+    "url": "/taodsite/static/media/mafalda_silva.508534ae.jpg"
   },
   {
     "revision": "538f0ec063b9e0a65ff843d4298d323e",
