@@ -44,7 +44,10 @@ export default function HeaderLinks(props) {
             </Link>,
             <Link to = "/galeria" className = {classes.dropdownLink}>
               Galeria
-            </Link>
+            </Link>,
+            <Link to = "/socio" className = {classes.dropdownLink}>
+             Torna-te Socio!
+           </Link>           
           ]}
         />
       </ListItem>
