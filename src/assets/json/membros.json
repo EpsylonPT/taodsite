@@ -95,6 +95,30 @@
             "naipe": "Soprano",
             "curso": "Engenharia do Ambiente",
             "escola": "FEUP"
+        }, 
+        {
+            "nome": "Hugo Guedes",
+            "img_src": "hugo_guedes",
+            "padrinho": "Marco Araújo",
+            "madrinha": "Andreia Silva",
+            "entrada": "2013",
+            "passagem": "2016",
+            "instrumento": "Cordas",
+            "naipe": "Baixo",
+            "curso": "Gestão do Património",
+            "escola": "ESE"
+        },    
+        {
+            "nome": "Mafalda Silva",
+            "img_src": "mafalda_silva",
+            "padrinho": "Marco Araújo",
+            "madrinha": "",
+            "entrada": "2015",
+            "passagem": "2018",
+            "instrumento": "Contrabaixo",
+            "naipe": "Soprano",
+            "curso": "Engenharia Química",
+            "escola": "FEUP"
         },
         {
             "nome": "Diogo Santos",

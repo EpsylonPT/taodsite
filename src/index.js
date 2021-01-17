@@ -25,7 +25,7 @@ ReactDOM.render(
       <Route path="/membros" component={Membros} />
       <Route path="/galeria" component={GaleriaPage} />
       <Route path="/cancioneiro" component={CancioneiroPage} />
-      <Route path="/loja" component={LojaPage} />
+      <Route path="/lojatre" component={LojaPage} />
       <Route path={mainLink} component={LandingPage} />
     </Switch>
   </Router>,
