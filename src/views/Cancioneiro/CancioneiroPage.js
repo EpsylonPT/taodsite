@@ -8,7 +8,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 
 import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
-
+import background from "assets/img/eventos/Apresentação CD TAOD - set 2018/DSC05705.jpg";
 import data from "assets/json/musicas.json"
 
 import "./Cancioneiro.css";
@@ -38,7 +38,7 @@ export default function CancioneiroPage(props) {
       <div
         className={classes.pageHeader}
         style={{
-          backgroundImage: "url(" + "image" + ")",
+          backgroundImage: "url(" + background + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center"
         }}

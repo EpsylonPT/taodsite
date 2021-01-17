@@ -11,7 +11,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Typography from '@material-ui/core/Typography';
 import sobrenosStyles from "assets/jss/material-kit-react/views/sobrenosPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/eventos/II Real Academicvs - Vila Real - Mar 2014/10965447_880106072010816_756592512_n.jpg";
 import Button from "components/CustomButtons/Button.js";
 
 import sobrenos from "assets/json/sobrenos.json"

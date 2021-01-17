@@ -13,7 +13,7 @@ import HeaderPage from "views/HeaderPage.js";
 import image from "assets/img/bg7.jpg";
 import data from "assets/json/eventos.json"
 import Footer from "components/Footer/Footer.js";
-import image1 from "assets/img/eventos/1.jpg";
+import image1 from "assets/img/eventos/I Gala AMARGAIA 2018/37408085_1939724092758030_3019206488322211840_o.jpg";
 import  "assets/scss/plugins/plugin-galeria.scss"
 import GaleriaCard from "./GaleriaCard.js"
 import galeriaStyle from "assets/jss/material-kit-react/views/sobrenosPage.js";
@@ -50,12 +50,14 @@ export default function GaleriaPage(props) {
             <div
                 className={classes.pageHeader}
                 style={{
-                    backgroundImage: "url(" + image + ")",
+                    backgroundImage: "url(" + image1 + ")",
                     backgroundSize: "cover",
                     backgroundPosition: "top center"
                 }}
             >
                 <div className={classes.container}>
+                <h2>Galeria</h2>
+                <h4>Clique nos titulos para ampliar as fotos</h4>
                     <GridContainer>
                        {fotos}
                     </GridContainer>
