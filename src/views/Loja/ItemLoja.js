@@ -40,42 +40,44 @@ export default function ItemLoja(props) {
     const OlxButton = withStyles({
         root: {
             background: "#23e5db",
-            borderRadius: 3,
+            borderRadius: 7,
             '&:hover': {
                 backgroundColor: "#a2ebe7",
-                color: '#FFF'
+                color: '#white'
             },
-            borderColor: '#0063cc',
+            '&:focus': {
+                backgroundColor: "#23e5db",
+                color: 'white'
+            },
             border: 0,
-            color: "black",
+            color: "white",
             height: 80,
-            marginBottom: -10,
-            marginLeft: 10,
-            marginRight: 10,
-
+            marginTop: 50,
+            marginLeft: 25,
+            marginRight: 25,
+            marginBottom: 2
         },
     })(Button);
 
     const EmailButton = withStyles({
         root: {
             background: "#1DB954",
-            borderRadius: 3,
+            borderRadius: 7,
             '&:hover': {
                 backgroundColor: "#92d1a8",
-                color: '#FFF'
+                color: 'white'
             },
             '&:focus': {
                 backgroundColor: "#1DB954",
-                color: 'black'
+                color: 'white'
             },
             border: 0,
-            color: "black",
+            color: "white",
             height: 80,
             marginTop: 50,
-            marginLeft: 10,
-            marginBottom: 2,
-            marginRight: 10,
-
+            marginLeft: 25,
+            marginRight: 25,
+            marginBottom: 2
         },
     })(Button);
 
@@ -135,8 +137,8 @@ export default function ItemLoja(props) {
                         </Card>
                     </GridItem >
                     <GridItem xs={6} id={"gridItem_" + nome}>
-                        <Card className="dataCard" id={"card_" + nome}>
-                            <Typography variant="h4" component="h2">
+                    <div style={{marginLeft: 35}}>
+                            <Typography style={{marginTop:70}}variant="h4" component="h2">
                                 {nome}
                             </Typography>
                             <Typography variant="h6" component="h2">
@@ -151,10 +153,10 @@ export default function ItemLoja(props) {
                             <EmailButton href={"mailto:taod.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
                                 Encomendar por email
                             </EmailButton>
-                            <OlxButton>
+                            <OlxButton href={"mailto:taod.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
                                 Encomendar por OLX
                             </OlxButton>
-                        </Card>
+                      </div>
                     </GridItem >
                 </GridContainer>
             </Card >
