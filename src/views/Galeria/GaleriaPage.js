@@ -1,16 +1,9 @@
 import React from "react";
 import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
-// react component for creating beautiful carousel
-import Carousel from "react-slick";
-// material-ui components
-// @material-ui/icons
-import LocationOn from "@material-ui/icons/LocationOn";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
 import HeaderPage from "views/HeaderPage.js";
-import image from "assets/img/bg7.jpg";
+import Typography from '@material-ui/core/Typography';
 import data from "assets/json/eventos.json"
 import Footer from "components/Footer/Footer.js";
 import image1 from "assets/img/eventos/I Gala AMARGAIA 2018/37408085_1939724092758030_3019206488322211840_o.jpg";
@@ -57,7 +50,9 @@ export default function GaleriaPage(props) {
             >
                 <div className={classes.container}>
                 <h2>Galeria</h2>
-                <h2 style={{alignSelf: "center"}}>Clique nos titulos para ampliar as fotos</h2>
+                <Typography variant="h5" align="center">
+                    Clique nos titulos para ampliar as fotos
+                </Typography> 
                     <GridContainer>
                        {fotos}
                     </GridContainer>
