@@ -51,8 +51,8 @@ export default function LojaPage(props) {
           <h2>Loja</h2>
        
           <Typography variant="h5" align="center">
-          Ao encomendar, forneça o seu número de sócio para ter o desconto que merece!
-          <p></p>Se ainda não é sócio,  <Link style={{color: "#1DB954"}} to = "/socio">     <b>clique aqui</b> </Link>
+          Ao encomendar, fornece o número de sócio para teres o desconto que mereces!
+          <p></p>Se ainda não és sócio,  <Link style={{color: "#1DB954"}} to = "/socio">     <b>clica aqui</b> </Link>
           </Typography> 
           <GridContainer justify="center">
             {items}
