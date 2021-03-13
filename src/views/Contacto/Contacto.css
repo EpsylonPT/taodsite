@@ -1,3 +1,12 @@
-#map {
-    height: 100%;
-  }
+
+a {
+  color:  #ffffff;
+ }
+
+a:hover {
+ color:  #bfbfbf;
+}
+
+a:focus {
+  color:  #ffffff;
+ }

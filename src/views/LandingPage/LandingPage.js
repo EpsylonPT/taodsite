@@ -68,7 +68,7 @@ export default function LandingPage() {
                   </h4>
                   <br />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
+                <GridItem  style={{marginTop: 700}} xs={12} sm={12} md={4}>
                 <h2 className={classes.title}>Parceiros e Benefícios</h2>
                 <Card>
                     <Slider {...carousel_settings} className="slick-slider">
