@@ -33,7 +33,7 @@ function getTunosECaloiros() {
         }
     })
     tunos = data.membros.map(function (i, index) {
-        if(i.passagem!="" && (i.nome != magister.nome) && (i.nome!= vice_magister.nome)){
+        if(i.passagem!=="" && (i.nome !== magister.nome) && (i.nome!== vice_magister.nome)){
             return (
                 <MembrosCard key={index} membro={i} tipo="tuno"/>
             )
@@ -41,9 +41,8 @@ function getTunosECaloiros() {
     })
 }
 
-export default function AcercaPage(props) {
+export default function AcercaPage() {
     const classes = useStyles();
-    const { ...rest } = props;
     getMagistereVice();
     getTunosECaloiros();
 

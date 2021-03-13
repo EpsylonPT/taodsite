@@ -1,18 +1,10 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
-// @material-ui/icons
-
-// core components
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderPage from "views/HeaderPage.js";
-import Parallax from "components/Parallax/Parallax.js";
 import Slider from "react-slick";
 import Card from "components/Card/Card.js";
 import styles from "assets/jss/material-kit-react/views/socioPage.js";
@@ -24,7 +16,6 @@ import ficha_socio from "assets/word/Ficha-de-Sócio.docx";
 import image from "assets/img/eventos/1.jpg"
 
 import patrocinios from "assets/json/patrocinios"
-const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
@@ -67,9 +58,8 @@ function getImages() {
 
 const fotos = getImages();
 
-export default function LandingPage(props) {
+export default function LandingPage() {
   const classes = useStyles();
-  const { ...rest } = props;
   return (
     <div>
       <HeaderPage change_height={50} />

@@ -1,9 +1,6 @@
 import React from "react";
 // @material-ui/core components
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
-
-// react components for routing our app without refresh
-import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 // core components
 import HeaderPage from "views/HeaderPage.js";
@@ -18,10 +15,9 @@ import image from "assets/img/eventos/2.jpg";
 const useStyles = makeStyles(styles);
 
 
-export default function ContactoPage(props) {
+export default function ContactoPage() {
 
   const classes = useStyles();
-  const { ...rest } = props;
 
   return (
     <div>

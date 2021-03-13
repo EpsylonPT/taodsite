@@ -1,20 +1,15 @@
 import React from "react";
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import {makeStyles } from "@material-ui/core/styles";
 // react component for creating beautiful carousel
 import Carousel from "react-slick";
 // material-ui components
 // @material-ui/icons
-import LocationOn from "@material-ui/icons/LocationOn";
 import styles from "assets/jss/material-kit-react/views/galeriaPage.js";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
-import HeaderPage from "views/HeaderPage.js";
-import image from "assets/img/bg7.jpg";
 import data from "assets/json/galeria.json"
-import Footer from "components/Footer/Footer.js";
-import image1 from "assets/img/eventos/1.jpg";
 import "assets/scss/plugins/plugin-galeria.scss";
 import DialogContent from "@material-ui/core/DialogContent";
 import Dialog from "@material-ui/core/Dialog";
@@ -64,7 +59,7 @@ export default function GaleriaCard(props) {
         slidesToScroll: 1,
         autoplay: true
     };
-    const { evento, ...rest } = props;
+    const { evento } = props;
     const fotos = getImages(evento);
 
     const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");

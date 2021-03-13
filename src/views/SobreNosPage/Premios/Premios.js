@@ -1,9 +1,8 @@
 import React from "react";
 // @material-ui/core components
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 // core components
-import { Link } from "react-router-dom";
 import HeaderPage from "views/HeaderPage.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -12,8 +11,6 @@ import image from "assets/img/eventos/Atuação Centro Cultural S. Felix da Mari
 
 import PremiosCard from "./PremioCard.js"
 import data from "assets/json/premios.json"
-import Button from "components/CustomButtons/Button.js";
-import modalStyle from "assets/jss/material-kit-react/modalStyle";
 import sobrenosStyles from "assets/jss/material-kit-react/views/sobrenosPage.js";
 
 const useStyles = makeStyles(sobrenosStyles);
@@ -28,9 +25,8 @@ function getPremios() {
     return premios;
   }
 
-export default function AcercaPage(props) {
+export default function AcercaPage() {
     const classes = useStyles();
-    const { ...rest } = props;
     const premios = getPremios()
     return (
         <div>

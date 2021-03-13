@@ -1,6 +1,6 @@
 import React from "react";
 // @material-ui/core components
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import {makeStyles } from "@material-ui/core/styles";
 
 // core components
 import { Link } from "react-router-dom";
@@ -34,10 +34,9 @@ function getTexto() {
     return texto;
 }
 
-export default function AcercaPage(props) {
+export default function AcercaPage() {
 
     const classes = useStyles();
-    const { ...rest } = props;
     const textoinit = getTextoInicial();
     const texto = getTexto();
     return (
@@ -56,7 +55,6 @@ export default function AcercaPage(props) {
                     <GridContainer justify="center">
                         {textoinit}
                     </GridContainer>
-                    <h3 />
                     <p>
                         {texto}
                     </p>

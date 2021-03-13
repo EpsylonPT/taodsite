@@ -1,29 +1,13 @@
 import React from "react";
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 
 import GridItem from "components/Grid/GridItem.js";
-import Button from '@material-ui/core/Button';
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 
 import Card from "components/Card/Card.js";
-
-const SpotifyButton = withStyles({
-    root: {
-        background: "#1DB954",
-        borderRadius: 3,
-        border: 0,
-        color: "white",
-        height: 35,
-        marginLeft: 10,
-        marginBottom: 2,
-        marginRight: 10,
-        boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)"
-    },
-})(Button);
-
 
 const textStyle = {
     textAlign: "center"
@@ -42,7 +26,7 @@ export default function PremiosCard(props) {
         setIsOpen(false)
     }
 
-    const { premio, ...rest } = props;
+    const { premio } = props;
 
     const classes = useStyles();
 

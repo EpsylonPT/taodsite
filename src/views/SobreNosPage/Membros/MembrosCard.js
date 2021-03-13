@@ -1,13 +1,10 @@
 import React from "react";
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import {makeStyles } from "@material-ui/core/styles";
 
 import GridItem from "components/Grid/GridItem.js";
 import Typography from '@material-ui/core/Typography';
 import Avatar from "@material-ui/core/Avatar";
 import Card from "components/Card/Card.js";
-const textStyle = {
-    textAlign: "center"
-};
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -36,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MembrosCard(props) {
 
-    const { membro, tipo, ...rest } = props;
+    const { membro, tipo} = props;
 
     const nome = membro.nome;
    
@@ -62,7 +59,7 @@ export default function MembrosCard(props) {
 
     function getMembro() {
 
-        if (tipo == "caloiro") {
+        if (tipo === "caloiro") {
             membro_show = (
                 <Card className={classes[cardAnimaton]} id={"card_" + nome}>
                     <button>

@@ -1,6 +1,6 @@
 import React from "react";
 // @material-ui/core components
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import {makeStyles } from "@material-ui/core/styles";
 
 // core components
 import HeaderPage from "views/HeaderPage.js";
@@ -25,10 +25,9 @@ function getMusicas() {
   return musicas;
 }
 
-export default function CancioneiroPage(props) {
+export default function CancioneiroPage() {
 
   const classes = useStyles();
-  const { ...rest } = props;
 
   const musicas = getMusicas()
 

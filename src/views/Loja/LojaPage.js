@@ -1,6 +1,6 @@
 import React from "react";
 // @material-ui/core components
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
@@ -28,10 +28,9 @@ function getItems() {
   return items;
 }
 
-export default function LojaPage(props) {
+export default function LojaPage() {
 
   const classes = useStyles();
-  const { ...rest } = props;
 
   const items = getItems()
 

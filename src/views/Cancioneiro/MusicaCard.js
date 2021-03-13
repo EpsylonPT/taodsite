@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 
 import GridItem from "components/Grid/GridItem.js";
@@ -42,7 +42,7 @@ export default function MusicaCard(props) {
         setIsOpen(false)
     }
 
-    const { musica, ...rest } = props;
+    const { musica } = props;
 
     const classes = useStyles();
 
@@ -80,7 +80,7 @@ export default function MusicaCard(props) {
     var spotifyHeader = (<i/>)
     var spotifyButton = (<i/>)
     const spotify_link = musica.spotify;
-    if (spotify_link != "") {
+    if (spotify_link !== "") {
         spotifyHeader = (
             <i className={classes.socialIcons + " fab fa-spotify"} />
         )

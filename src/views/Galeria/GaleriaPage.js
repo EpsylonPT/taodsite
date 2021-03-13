@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import {makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import HeaderPage from "views/HeaderPage.js";
@@ -27,18 +27,9 @@ function getImages() {
     return fotos;
 }
 
-export default function GaleriaPage(props) {
+export default function GaleriaPage() {
     const classes = useStyles();
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true
-    };
     const fotos = getImages();
-    const { ...rest } = props;
     return (
         <div>
             <HeaderPage change_height={50} />

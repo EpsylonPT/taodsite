@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles, createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 
 import GridContainer from "components/Grid/GridContainer.js";
@@ -12,14 +12,10 @@ import Card from "components/Card/Card.js";
 import "./Loja.css";
 import "assets/scss/plugins/plugin-galeria.scss";
 
-const textStyle = {
-    textAlign: "center"
-};
-
 const useStyles = makeStyles(styles);
 
 export default function ItemLoja(props) {
-    const { item, ...rest } = props;
+    const { item } = props;
 
     const classes = useStyles();
 
@@ -55,7 +51,6 @@ export default function ItemLoja(props) {
             height: 80,
             marginBottom: -10,
             marginLeft: 10,
-            marginBottom: 2,
             marginRight: 10,
 
         },
