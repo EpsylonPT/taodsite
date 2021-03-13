@@ -72,7 +72,7 @@ export default function LandingPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <HeaderPage change_height={400} />
+      <HeaderPage change_height={50} />
       <div
         className={classes.pageHeader}
         style={{
