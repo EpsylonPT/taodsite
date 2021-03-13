@@ -8,6 +8,7 @@ import "assets/scss/material-kit-react.scss?v=1.9.0";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import CancioneiroPage from "views/Cancioneiro/CancioneiroPage.js";
 import LojaPage from "views/Loja/LojaPage.js";
+import ContactoPage from "views/Contacto/ContactoPage.js";
 import SocioPage from "views/Socio/SocioPage.js";
 import AcercaPage from "views/SobreNosPage/SobreNosPage.js";
 import Premios from "views/SobreNosPage/Premios/Premios.js"
@@ -27,6 +28,7 @@ ReactDOM.render(
       <Route path="/galeria" component={GaleriaPage} />
       <Route path="/cancioneiro" component={CancioneiroPage} />
       <Route path="/loja" component={LojaPage} />
+      <Route path="/contacto" component={ContactoPage} />
       <Route path="/socio" component={SocioPage} />
       <Route path={mainLink} component={LandingPage} />
     </Switch>

@@ -60,6 +60,16 @@ export default function HeaderLinks(props) {
           </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
+          <Link
+            color="transparent"
+            to="/contacto"
+            target = "_self"
+            className={classes.navLink}
+          >
+            Contacto
+          </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Tooltip
           id="facebook-tooltip"
           title="Siga-nos no Facebook"
