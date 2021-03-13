@@ -52,7 +52,7 @@ export default function ItemLoja(props) {
             borderColor: '#0063cc',
             border: 0,
             color: "black",
-            height: 35,
+            height: 80,
             marginBottom: -10,
             marginLeft: 10,
             marginBottom: 2,
@@ -69,9 +69,13 @@ export default function ItemLoja(props) {
                 backgroundColor: "#92d1a8",
                 color: '#FFF'
             },
+            '&:focus': {
+                backgroundColor: "#1DB954",
+                color: 'black'
+            },
             border: 0,
             color: "black",
-            height: 35,
+            height: 80,
             marginTop: 50,
             marginLeft: 10,
             marginBottom: 2,
@@ -79,6 +83,31 @@ export default function ItemLoja(props) {
 
         },
     })(Button);
+
+    const emptyField = "[POR PREENCHER]";
+
+    const paragrafo = "%0D%0A";
+
+    const getToday = function(){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        return String(dd + '/' + mm + '/' + yyyy);
+    }
+
+
+    const bodyTemplate = (    
+        "A Tuna Académica de Oliveira do Douro agradece desde já o seu apoio!" + paragrafo +
+        "Esperemos contar consigo na nossa próxima atuação!" + paragrafo +
+        "------------------------------------------------------------------------------------------------" + paragrafo + paragrafo + 
+        "Item a encomendar: " + item.nome + paragrafo+ paragrafo +
+        "Quantidade: " + emptyField + paragrafo + paragrafo +
+        "Morada: " + emptyField  + paragrafo + paragrafo +
+        "Número de sócio (se aplicável): " + emptyField + paragrafo + paragrafo +
+        "------------------------------------------------------------------------------------------------" + paragrafo +
+        "Email gerado a: " + getToday()
+    )
 
     function getImages() {
         var fotos = item.fotos.map(function (i, index) {
@@ -124,7 +153,7 @@ export default function ItemLoja(props) {
                             <Typography variant="h6" component="h2">
                                 {preco_socio}
                             </Typography>
-                            <EmailButton>
+                            <EmailButton href={"mailto:taod.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
                                 Encomendar por email
                             </EmailButton>
                             <OlxButton>
