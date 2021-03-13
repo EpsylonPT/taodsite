@@ -150,10 +150,10 @@ export default function ItemLoja(props) {
                             <Typography variant="h6" component="h2">
                                 {preco_socio}
                             </Typography>
-                            <EmailButton href={"mailto:taod.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
+                            <EmailButton href={"mailto:tao.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
                                 Encomendar por email
                             </EmailButton>
-                            <OlxButton href={"mailto:taod.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
+                            <OlxButton href={"mailto:tao.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
                                 Encomendar por OLX
                             </OlxButton>
                       </div>

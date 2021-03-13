@@ -60,7 +60,7 @@ export default function ContactoPage() {
           </Typography> 
 
           <Typography variant="h5" align="left" gutterBottom>
-          Email:  <a href={"mailto:taod.douro@gmail.com"}><b>tao.douro@gmail.com</b></a>
+          Email:  <a href={"mailto:tao.douro@gmail.com"}><b>tao.douro@gmail.com</b></a>
           </Typography> 
           </div>
           <div style={{marginTop: 80}}>
