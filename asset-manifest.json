@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/taodsite/static/css/main.34c11c0b.chunk.css",
-    "main.js": "/taodsite/static/js/main.32013ec7.chunk.js",
-    "main.js.map": "/taodsite/static/js/main.32013ec7.chunk.js.map",
+    "main.css": "/taodsite/static/css/main.c6daada6.chunk.css",
+    "main.js": "/taodsite/static/js/main.6d1bb6c6.chunk.js",
+    "main.js.map": "/taodsite/static/js/main.6d1bb6c6.chunk.js.map",
     "runtime-main.js": "/taodsite/static/js/runtime-main.c5e94ac5.js",
     "runtime-main.js.map": "/taodsite/static/js/runtime-main.c5e94ac5.js.map",
     "static/js/2.eb414b70.chunk.js": "/taodsite/static/js/2.eb414b70.chunk.js",
     "static/js/2.eb414b70.chunk.js.map": "/taodsite/static/js/2.eb414b70.chunk.js.map",
     "index.html": "/taodsite/index.html",
-    "precache-manifest.de58773496c2758104edbb155b65f1c7.js": "/taodsite/precache-manifest.de58773496c2758104edbb155b65f1c7.js",
+    "precache-manifest.82ed8517367973ac796e4a29f2d8ee38.js": "/taodsite/precache-manifest.82ed8517367973ac796e4a29f2d8ee38.js",
     "service-worker.js": "/taodsite/service-worker.js",
-    "static/css/main.34c11c0b.chunk.css.map": "/taodsite/static/css/main.34c11c0b.chunk.css.map",
+    "static/css/main.c6daada6.chunk.css.map": "/taodsite/static/css/main.c6daada6.chunk.css.map",
     "static/js/2.eb414b70.chunk.js.LICENSE.txt": "/taodsite/static/js/2.eb414b70.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/taodsite/static/media/1.f2cd019d.jpg",
     "static/media/10300277_797997193557839_6448900840884838097_n.jpg": "/taodsite/static/media/10300277_797997193557839_6448900840884838097_n.037869fc.jpg",
@@ -241,7 +241,7 @@
   "entrypoints": [
     "static/js/runtime-main.c5e94ac5.js",
     "static/js/2.eb414b70.chunk.js",
-    "static/css/main.34c11c0b.chunk.css",
-    "static/js/main.32013ec7.chunk.js"
+    "static/css/main.c6daada6.chunk.css",
+    "static/js/main.6d1bb6c6.chunk.js"
   ]
 }
