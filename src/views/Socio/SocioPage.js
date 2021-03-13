@@ -97,7 +97,7 @@ export default function LandingPage(props) {
               <GridItem xs={12}>
                 <br></br>
                 <h4>
-                  Após leres os termos e condições, preenche esta ficha e envia para tao.douro@gmail.com ou imprime e entrega presencialmente a um dos membros da tuna em eventos da tuna
+                  Após leres os termos e condições, preenche esta ficha e envia para <a href="mailto:tao.douro@gmail.com" style={{color: "#FFFFFF"}}><b>tao.douro@gmail.com</b></a> ou imprime e entrega presencialmente a um dos membros da tuna em eventos da tuna
                   </h4>
                 <br />
                 <DownloadButton href={ficha_socio} download="Ficha-de-socio">Download Ficha de sócio</DownloadButton>
