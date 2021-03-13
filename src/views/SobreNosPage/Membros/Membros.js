@@ -6,7 +6,9 @@ import HeaderPage from "views/HeaderPage.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Typography from '@material-ui/core/Typography';
-import image from "assets/img/bg7.jpg";
+
+import image from "assets/img/eventos/XII Fastà Noite Mai 2017 - Coimbra/XII_Fastà_Noite_-_28_de_maio_de_2017.JPG.jpg";
+
 import MembrosCard from "./MembrosCard.js"
 import data from "assets/json/membros.json"
 import sobrenosStyles from "assets/jss/material-kit-react/views/sobrenosPage.js";

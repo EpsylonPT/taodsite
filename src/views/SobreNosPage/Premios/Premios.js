@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 import HeaderPage from "views/HeaderPage.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
-import image from "assets/img/bg7.jpg";
+
+import image from "assets/img/eventos/Atuação Centro Cultural S. Felix da Marinha - abr 2018/44070682_1832037166926133_4255104579244392448_n.jpg";
+
 import PremiosCard from "./PremioCard.js"
 import data from "assets/json/premios.json"
 import Button from "components/CustomButtons/Button.js";
