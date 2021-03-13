@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8c88cd6bba811b610fa832b7bcea21a",
+    "revision": "fb42ad80f86e24af9336269650cc622b",
     "url": "/taodsite/index.html"
   },
   {
-    "revision": "51d44ef6b682d7bc0741",
-    "url": "/taodsite/static/css/main.c6daada6.chunk.css"
+    "revision": "d68ef2f0096e0dbc8e06",
+    "url": "/taodsite/static/css/main.3c07f2f8.chunk.css"
   },
   {
-    "revision": "789d14416cddf4e333b0",
-    "url": "/taodsite/static/js/2.ac7db8e6.chunk.js"
+    "revision": "407cedf544fd876f654f",
+    "url": "/taodsite/static/js/2.5a124a74.chunk.js"
   },
   {
     "revision": "39ceff715031186693259ebf7bfabe58",
-    "url": "/taodsite/static/js/2.ac7db8e6.chunk.js.LICENSE.txt"
+    "url": "/taodsite/static/js/2.5a124a74.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "51d44ef6b682d7bc0741",
-    "url": "/taodsite/static/js/main.70ea1a62.chunk.js"
+    "revision": "d68ef2f0096e0dbc8e06",
+    "url": "/taodsite/static/js/main.b41b37c3.chunk.js"
   },
   {
     "revision": "9b7f4289563fe7941f19",
@@ -262,6 +262,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f03d5187baf7d4fbd3c41a0cf4177dc6",
     "url": "/taodsite/static/media/19264477_1109091819194329_2438596184312317223_o.f03d5187.jpg"
+  },
+  {
+    "revision": "09699bced1d018a24af5e79e4c8a5d24",
+    "url": "/taodsite/static/media/2.09699bce.jpg"
   },
   {
     "revision": "5569edc5b14cf4c6fb00e25212569eca",
@@ -682,10 +686,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ec0aa6dbe21d2ce6ccc03558282d753e",
     "url": "/taodsite/static/media/armando.ec0aa6db.jpg"
-  },
-  {
-    "revision": "b08234a2b7e8e4fb2e3c4e713252021c",
-    "url": "/taodsite/static/media/bg7.b08234a2.jpg"
   },
   {
     "revision": "592dba409f100c1b93b2a1673f8346df",

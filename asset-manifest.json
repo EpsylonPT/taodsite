@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/taodsite/static/css/main.c6daada6.chunk.css",
-    "main.js": "/taodsite/static/js/main.70ea1a62.chunk.js",
-    "main.js.map": "/taodsite/static/js/main.70ea1a62.chunk.js.map",
+    "main.css": "/taodsite/static/css/main.3c07f2f8.chunk.css",
+    "main.js": "/taodsite/static/js/main.b41b37c3.chunk.js",
+    "main.js.map": "/taodsite/static/js/main.b41b37c3.chunk.js.map",
     "runtime-main.js": "/taodsite/static/js/runtime-main.c5e94ac5.js",
     "runtime-main.js.map": "/taodsite/static/js/runtime-main.c5e94ac5.js.map",
-    "static/js/2.ac7db8e6.chunk.js": "/taodsite/static/js/2.ac7db8e6.chunk.js",
-    "static/js/2.ac7db8e6.chunk.js.map": "/taodsite/static/js/2.ac7db8e6.chunk.js.map",
+    "static/js/2.5a124a74.chunk.js": "/taodsite/static/js/2.5a124a74.chunk.js",
+    "static/js/2.5a124a74.chunk.js.map": "/taodsite/static/js/2.5a124a74.chunk.js.map",
     "index.html": "/taodsite/index.html",
-    "precache-manifest.66c3a6d38de2134a2c88606b1084c202.js": "/taodsite/precache-manifest.66c3a6d38de2134a2c88606b1084c202.js",
+    "precache-manifest.cb64a99b93cb5652971189f1e306ea6f.js": "/taodsite/precache-manifest.cb64a99b93cb5652971189f1e306ea6f.js",
     "service-worker.js": "/taodsite/service-worker.js",
-    "static/css/main.c6daada6.chunk.css.map": "/taodsite/static/css/main.c6daada6.chunk.css.map",
-    "static/js/2.ac7db8e6.chunk.js.LICENSE.txt": "/taodsite/static/js/2.ac7db8e6.chunk.js.LICENSE.txt",
+    "static/css/main.3c07f2f8.chunk.css.map": "/taodsite/static/css/main.3c07f2f8.chunk.css.map",
+    "static/js/2.5a124a74.chunk.js.LICENSE.txt": "/taodsite/static/js/2.5a124a74.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/taodsite/static/media/1.f2cd019d.jpg",
     "static/media/10300277_797997193557839_6448900840884838097_n.jpg": "/taodsite/static/media/10300277_797997193557839_6448900840884838097_n.037869fc.jpg",
     "static/media/10325367_789226737784215_7699705597989847400_n.jpg": "/taodsite/static/media/10325367_789226737784215_7699705597989847400_n.60912c06.jpg",
@@ -176,7 +176,6 @@
     "static/media/andre_camarinha.jpg": "/taodsite/static/media/andre_camarinha.628b345d.jpg",
     "static/media/andre_ramos.jpg": "/taodsite/static/media/andre_ramos.b049ae70.jpg",
     "static/media/armando.jpg": "/taodsite/static/media/armando.ec0aa6db.jpg",
-    "static/media/bg7.jpg": "/taodsite/static/media/bg7.b08234a2.jpg",
     "static/media/camar.jpg": "/taodsite/static/media/camar.592dba40.jpg",
     "static/media/carla.jpg": "/taodsite/static/media/carla.3e65499c.jpg",
     "static/media/carla_sofia.jpg": "/taodsite/static/media/carla_sofia.22592c3d.jpg",
@@ -240,8 +239,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5e94ac5.js",
-    "static/js/2.ac7db8e6.chunk.js",
-    "static/css/main.c6daada6.chunk.css",
-    "static/js/main.70ea1a62.chunk.js"
+    "static/js/2.5a124a74.chunk.js",
+    "static/css/main.3c07f2f8.chunk.css",
+    "static/js/main.b41b37c3.chunk.js"
   ]
 }
