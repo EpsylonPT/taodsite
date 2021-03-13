@@ -67,9 +67,10 @@ export default function LandingPage(props) {
             <div style={{top: 50}}>
               <GridContainer  alignItems="center"  justify="center">
                 <GridItem xs={12}>
-                  <h1 className={classes.title}>Website oficial</h1>
+                  <h1 className={classes.title}>Website oficial da Tuna</h1>
                   <h4>
-                  Aqui é para escrever um textinho todo bonitinho, joão vitor começa a trabalhar
+                  Bem vindo ao site oficial da melhor tuna de Oliveira do Douro. 
+                  Aqui poderás encontrar informações irrelevantes para a tua vida mas ficas a conhecer a tuna e de como te tornares parte dela!
                   </h4>
                   <br />
                 </GridItem>

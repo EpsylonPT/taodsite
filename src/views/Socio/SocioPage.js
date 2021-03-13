@@ -18,7 +18,8 @@ import Card from "components/Card/Card.js";
 import styles from "assets/jss/material-kit-react/views/socioPage.js";
 import "assets/scss/plugins/plugin-galeria.scss";
 
-import ficha from "assets/pdf/Ficha-de-Socio.pdf";
+import termos from "assets/pdf/Termos-Condições-Sócio.pdf"
+import ficha_socio from "assets/word/Ficha-de-Sócio.docx";
 
 import image from "assets/img/eventos/1.jpg"
 
@@ -70,16 +71,23 @@ export default function LandingPage(props) {
             <div style={{top: 50}}>
               <GridContainer  alignItems="center"  justify="center">
                 <GridItem xs={12}>
+                  <br/>
                   <h1 className={classes.title}>Torna-te Socio desta tuna!</h1>
                   <h4>
-                  Basta clicar no botão abaixo para fazer download da ficha de inscrição. Podes preencher à mão e digitalizar ou então usar uma ferramenta online (ex: dochub)
+                  Antes de te tornar sócio da tuna lê os termos e condições!
                   </h4>
                   <br />
-                </GridItem>
-                <GridItem xs={12}>
-                <Button><a href={ficha} download="Ficha-de-Socio">Download</a></Button>
+                  <Button><a href={termos} download="Termos-e-condições">Download Termos e condições</a></Button>
                 </GridItem>
                 <br />
+                <GridItem xs={12}>
+                  <br></br>
+                  <h4>
+                  Após leres os termos e condições, preenche esta ficha e envia para tao.douro@gmail.com ou imprime e entrega presencialmente a um dos membros da tuna em eventos da tuna
+                  </h4>
+                  <br />
+                  <Button><a href={ficha_socio} download="Ficha-de-socio">Download Ficha de sócio</a></Button>
+                </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
                 <h2 className={classes.title}>Parceiros e Benefícios</h2>
                 <Card>

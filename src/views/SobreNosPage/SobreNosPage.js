@@ -64,7 +64,7 @@ export default function AcercaPage(props) {
                         <GridItem xs={12} sm={6} style={{ textAlign: 'center' }}>
                             <Button className={classes.button} component={Link} to="/premios" color="github">
                                 <Typography variant="h4" component="h2">
-                                    Premios
+                                    Prémios
                         </Typography>
                             </Button>
                         </GridItem>
