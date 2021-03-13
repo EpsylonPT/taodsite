@@ -50,12 +50,6 @@ export default function HeaderLinks(props) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="loja-tooltip"
-          title="Abrir loja"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
           <Button
             color="transparent"
             href="/loja"
@@ -64,7 +58,6 @@ export default function HeaderLinks(props) {
           >
             Loja
           </Button>
-        </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip

@@ -57,7 +57,7 @@ export default function GaleriaPage(props) {
             >
                 <div className={classes.container}>
                 <h2>Galeria</h2>
-                <h4>Clique nos titulos para ampliar as fotos</h4>
+                <h2 style={{alignSelf: "center"}}>Clique nos titulos para ampliar as fotos</h2>
                     <GridContainer>
                        {fotos}
                     </GridContainer>
