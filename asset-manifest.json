@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/taodsite/static/css/main.e648e2b8.chunk.css",
-    "main.js": "/taodsite/static/js/main.9204cd8f.chunk.js",
-    "main.js.map": "/taodsite/static/js/main.9204cd8f.chunk.js.map",
+    "main.css": "/taodsite/static/css/main.8c137f6f.chunk.css",
+    "main.js": "/taodsite/static/js/main.0cbde967.chunk.js",
+    "main.js.map": "/taodsite/static/js/main.0cbde967.chunk.js.map",
     "runtime-main.js": "/taodsite/static/js/runtime-main.c5e94ac5.js",
     "runtime-main.js.map": "/taodsite/static/js/runtime-main.c5e94ac5.js.map",
-    "static/js/2.17b7ccbc.chunk.js": "/taodsite/static/js/2.17b7ccbc.chunk.js",
-    "static/js/2.17b7ccbc.chunk.js.map": "/taodsite/static/js/2.17b7ccbc.chunk.js.map",
+    "static/js/2.098fc8fc.chunk.js": "/taodsite/static/js/2.098fc8fc.chunk.js",
+    "static/js/2.098fc8fc.chunk.js.map": "/taodsite/static/js/2.098fc8fc.chunk.js.map",
     "index.html": "/taodsite/index.html",
-    "precache-manifest.2e2d502808810c55f092843f190be43e.js": "/taodsite/precache-manifest.2e2d502808810c55f092843f190be43e.js",
+    "precache-manifest.0a35531b3f1626176ba17d8fd8d91e98.js": "/taodsite/precache-manifest.0a35531b3f1626176ba17d8fd8d91e98.js",
     "service-worker.js": "/taodsite/service-worker.js",
-    "static/css/main.e648e2b8.chunk.css.map": "/taodsite/static/css/main.e648e2b8.chunk.css.map",
-    "static/js/2.17b7ccbc.chunk.js.LICENSE.txt": "/taodsite/static/js/2.17b7ccbc.chunk.js.LICENSE.txt",
+    "static/css/main.8c137f6f.chunk.css.map": "/taodsite/static/css/main.8c137f6f.chunk.css.map",
+    "static/js/2.098fc8fc.chunk.js.LICENSE.txt": "/taodsite/static/js/2.098fc8fc.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/taodsite/static/media/1.f2cd019d.jpg",
     "static/media/10300277_797997193557839_6448900840884838097_n.jpg": "/taodsite/static/media/10300277_797997193557839_6448900840884838097_n.037869fc.jpg",
     "static/media/10325367_789226737784215_7699705597989847400_n.jpg": "/taodsite/static/media/10325367_789226737784215_7699705597989847400_n.60912c06.jpg",
@@ -239,8 +239,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5e94ac5.js",
-    "static/js/2.17b7ccbc.chunk.js",
-    "static/css/main.e648e2b8.chunk.css",
-    "static/js/main.9204cd8f.chunk.js"
+    "static/js/2.098fc8fc.chunk.js",
+    "static/css/main.8c137f6f.chunk.css",
+    "static/js/main.0cbde967.chunk.js"
   ]
 }
