@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/taodsite/static/css/main.34c11c0b.chunk.css",
-    "main.js": "/taodsite/static/js/main.432c5c43.chunk.js",
-    "main.js.map": "/taodsite/static/js/main.432c5c43.chunk.js.map",
+    "main.js": "/taodsite/static/js/main.32013ec7.chunk.js",
+    "main.js.map": "/taodsite/static/js/main.32013ec7.chunk.js.map",
     "runtime-main.js": "/taodsite/static/js/runtime-main.c5e94ac5.js",
     "runtime-main.js.map": "/taodsite/static/js/runtime-main.c5e94ac5.js.map",
-    "static/js/2.97516429.chunk.js": "/taodsite/static/js/2.97516429.chunk.js",
-    "static/js/2.97516429.chunk.js.map": "/taodsite/static/js/2.97516429.chunk.js.map",
+    "static/js/2.eb414b70.chunk.js": "/taodsite/static/js/2.eb414b70.chunk.js",
+    "static/js/2.eb414b70.chunk.js.map": "/taodsite/static/js/2.eb414b70.chunk.js.map",
     "index.html": "/taodsite/index.html",
-    "precache-manifest.c801d4d0e57b9e5750458f1edcdda4c8.js": "/taodsite/precache-manifest.c801d4d0e57b9e5750458f1edcdda4c8.js",
+    "precache-manifest.de58773496c2758104edbb155b65f1c7.js": "/taodsite/precache-manifest.de58773496c2758104edbb155b65f1c7.js",
     "service-worker.js": "/taodsite/service-worker.js",
     "static/css/main.34c11c0b.chunk.css.map": "/taodsite/static/css/main.34c11c0b.chunk.css.map",
-    "static/js/2.97516429.chunk.js.LICENSE.txt": "/taodsite/static/js/2.97516429.chunk.js.LICENSE.txt",
+    "static/js/2.eb414b70.chunk.js.LICENSE.txt": "/taodsite/static/js/2.eb414b70.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/taodsite/static/media/1.f2cd019d.jpg",
     "static/media/10300277_797997193557839_6448900840884838097_n.jpg": "/taodsite/static/media/10300277_797997193557839_6448900840884838097_n.037869fc.jpg",
     "static/media/10325367_789226737784215_7699705597989847400_n.jpg": "/taodsite/static/media/10325367_789226737784215_7699705597989847400_n.60912c06.jpg",
@@ -134,7 +134,7 @@
     "static/media/942688_561742220532237_1123917956_n.jpg": "/taodsite/static/media/942688_561742220532237_1123917956_n.2347ca6b.jpg",
     "static/media/DSC05567.jpg": "/taodsite/static/media/DSC05567.ba4487de.jpg",
     "static/media/DSC05705.jpg": "/taodsite/static/media/DSC05705.e465bd07.jpg",
-    "static/media/Ficha-de-Socio.pdf": "/taodsite/static/media/Ficha-de-Socio.a29dfe47.pdf",
+    "static/media/Ficha-de-Sócio.docx": "/taodsite/static/media/Ficha-de-Sócio.8487ba83.docx",
     "static/media/Homenagem Antigos Professores de direito -2014.jpg": "/taodsite/static/media/Homenagem Antigos Professores de direito -2014.d13fa7af.jpg",
     "static/media/I noite de serenatas - Out 2018.jpg": "/taodsite/static/media/I noite de serenatas - Out 2018.9a2e7c35.jpg",
     "static/media/III TuNa Praia - 2 de abril de 2017.jpg": "/taodsite/static/media/III TuNa Praia - 2 de abril de 2017.09fb94ab.jpg",
@@ -164,6 +164,7 @@
     "static/media/Sem_Título11.jpg": "/taodsite/static/media/Sem_Título11.b648039a.jpg",
     "static/media/TAOD.jpg": "/taodsite/static/media/TAOD.dfef323a.jpg",
     "static/media/TAOD2.jpg": "/taodsite/static/media/TAOD2.a1bddee9.jpg",
+    "static/media/Termos-Condições-Sócio.pdf": "/taodsite/static/media/Termos-Condições-Sócio.9b03cbf0.pdf",
     "static/media/Vfestim.jpg": "/taodsite/static/media/Vfestim.e020a1ba.jpg",
     "static/media/XII_Fastà_Noite_-_28_de_maio_de_2017.JPG.jpg": "/taodsite/static/media/XII_Fastà_Noite_-_28_de_maio_de_2017.JPG.85bf9b08.jpg",
     "static/media/XVAniversario.jpg": "/taodsite/static/media/XVAniversario.77787b1a.jpg",
@@ -239,8 +240,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5e94ac5.js",
-    "static/js/2.97516429.chunk.js",
+    "static/js/2.eb414b70.chunk.js",
     "static/css/main.34c11c0b.chunk.css",
-    "static/js/main.432c5c43.chunk.js"
+    "static/js/main.32013ec7.chunk.js"
   ]
 }
