@@ -85,8 +85,8 @@ export default function LandingPage(props) {
               </GridContainer>
             </div>
           </div>
-         </div>
-       <Footer whiteFont />
+          <Footer whiteFont />
+         </div>     
     </div>
   );
 }
