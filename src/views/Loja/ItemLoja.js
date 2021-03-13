@@ -114,7 +114,7 @@ export default function ItemLoja(props) {
             var foto = require("assets/img/loja/" + item.pasta + "/" + i + ".jpg");
             return (
                 <div>
-                    <img src={foto} alt={index} className="slick-image" />
+                    <img key={foto} src={foto} alt={index} className="slick-image" />
                 </div>
             )
         })

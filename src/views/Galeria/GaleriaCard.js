@@ -28,8 +28,8 @@ function getImages(evento) {
         if (i.nome === evento) {
             var foto = require("assets/img/eventos/" + i.nome + i.imageName);
             return (
-                <div>
-                    <img src={foto} alt={index} className="slick-image" />
+                <div key={foto}>
+                    <img key={foto} src={foto} alt={index} className="slick-image" />
                 </div>
             )
         }
@@ -85,9 +85,8 @@ export default function GaleriaCard(props) {
                     onClose={handleDialogClose}
                     aria-labelledby="modal-slide-title"
                     aria-describedby="modal-slide-description"
-                    fullWidth="sm"
                     maxWidth="sm"
-                    overlayStyle={{ backgroundColor: 'transparent' }
+                    overlaystyle={{ backgroundColor: 'transparent' }
                     }
                 >
                     <DialogContent dividers
