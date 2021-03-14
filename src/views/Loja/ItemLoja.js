@@ -5,10 +5,12 @@ import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Typography from '@material-ui/core/Typography';
 import Slider from "react-slick";
 
 import Card from "components/Card/Card.js";
+import {refresh} from "./Carrinho.js";
 import "./Loja.css";
 import "assets/scss/plugins/plugin-galeria.scss";
 
@@ -37,29 +39,7 @@ export default function ItemLoja(props) {
         focusOnSelect: true
     };
 
-    const OlxButton = withStyles({
-        root: {
-            background: "#23e5db",
-            borderRadius: 7,
-            '&:hover': {
-                backgroundColor: "#a2ebe7",
-                color: '#white'
-            },
-            '&:focus': {
-                backgroundColor: "#23e5db",
-                color: 'white'
-            },
-            border: 0,
-            color: "white",
-            height: 80,
-            marginTop: 50,
-            marginLeft: 25,
-            marginRight: 25,
-            marginBottom: 2
-        },
-    })(Button);
-
-    const EmailButton = withStyles({
+    const AddButton = withStyles({
         root: {
             background: "#1DB954",
             borderRadius: 7,
@@ -71,40 +51,26 @@ export default function ItemLoja(props) {
                 backgroundColor: "#1DB954",
                 color: 'white'
             },
-            border: 0,
+            fontSize: "50px",
             color: "white",
-            height: 80,
-            marginTop: 50,
-            marginLeft: 25,
-            marginRight: 25,
-            marginBottom: 2
         },
     })(Button);
-
-    const emptyField = "[POR PREENCHER]";
-
-    const paragrafo = "%0D%0A";
-
-    const getToday = function(){
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
-        return String(dd + '/' + mm + '/' + yyyy);
-    }
-
-
-    const bodyTemplate = (    
-        "A Tuna Académica de Oliveira do Douro agradece desde já o seu apoio!" + paragrafo +
-        "Esperemos contar consigo na nossa próxima atuação!" + paragrafo +
-        "------------------------------------------------------------------------------------------------" + paragrafo + paragrafo + 
-        "Item a encomendar: " + item.nome + paragrafo+ paragrafo +
-        "Quantidade: " + emptyField + paragrafo + paragrafo +
-        "Morada: " + emptyField  + paragrafo + paragrafo +
-        "Número de sócio (se aplicável): " + emptyField + paragrafo + paragrafo +
-        "------------------------------------------------------------------------------------------------" + paragrafo +
-        "Email gerado a: " + getToday()
-    )
+    const RemoveButton = withStyles({
+        root: {
+            background: "#1DB954",
+            borderRadius: 7,
+            '&:hover': {
+                backgroundColor: "#92d1a8",
+                color: 'white'
+            },
+            '&:focus': {
+                backgroundColor: "#1DB954",
+                color: 'white'
+            },
+            fontSize: "50px",
+            color: "white",
+        },
+    })(Button);
 
     function getImages() {
         var fotos = item.fotos.map(function (i, index) {
@@ -125,6 +91,25 @@ export default function ItemLoja(props) {
            "Preço: " + item.preco
     );
 
+    let numero_items = 0;
+
+    function add(){
+        numero_items += 1;
+        updateValue()
+    }
+
+    function remove(){
+        if(numero_items > 0){
+            numero_items -= 1;
+        }
+        updateValue()
+    }
+
+    function updateValue(){
+     document.getElementById("value_" + nome).innerHTML = numero_items;
+     refresh(nome,numero_items);
+    }
+
     return (
         <GridItem xs={12} id={"gridItem_" + nome}>
             <Card className={classes[cardAnimaton]} id={"card_" + nome}>
@@ -137,7 +122,8 @@ export default function ItemLoja(props) {
                         </Card>
                     </GridItem >
                     <GridItem xs={6} id={"gridItem_" + nome}>
-                    <div style={{marginLeft: 35}}>
+                    <GridContainer justify="flex-end">
+                          <GridItem xs={12} id={"gridItem2_" + nome}>
                             <Typography style={{marginTop:70}}variant="h4" component="h2">
                                 {nome}
                             </Typography>
@@ -150,13 +136,25 @@ export default function ItemLoja(props) {
                             <Typography variant="h6" component="h2">
                                 {preco_socio}
                             </Typography>
-                            <EmailButton href={"mailto:tao.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
-                                Encomendar por email
-                            </EmailButton>
-                            <OlxButton href={"mailto:tao.douro@gmail.com?subject=" + item.email.subject + "&body=" + bodyTemplate}>
-                                Encomendar por OLX
-                            </OlxButton>
-                      </div>
+                            </GridItem >
+                          <GridItem xs={12} id={"gridItem3_" + nome} 
+                             style={{ display: 'flex',
+                                     alignItems: 'center',
+                                     marginTop: "40px",
+                                     justifyContent: 'center'}}>
+                            <ButtonGroup>
+                            <RemoveButton id={"RemoveButton_" + nome} onClick={remove}>
+                               -
+                            </RemoveButton>
+                            <Typography variant="h2" id={"value_" + nome} style={{ alignSelf: "center", marginLeft: "10px", marginRight: "10px"}}>
+                                {numero_items}
+                            </Typography> 
+                            <AddButton id={"AddButon_" + nome} onClick={add}>
+                               +
+                            </AddButton>  
+                            </ButtonGroup>
+                            </GridItem >
+                    </GridContainer>
                     </GridItem >
                 </GridContainer>
             </Card >
