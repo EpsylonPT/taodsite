@@ -96,7 +96,7 @@ const SendButton = withStyles({
 })(Button);
 
 function sendEmail() {
-    console.log(getItems());
+    CheckoutFormValues.itens = getItems();
     send('default_service', 'template_kvzn3jo', CheckoutFormValues)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);

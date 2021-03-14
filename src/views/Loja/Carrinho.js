@@ -22,18 +22,36 @@ export function refresh(item,quantity){
     recalculate()
 }
 export function getItems(){
-    return items;
+    let total = 0;
+    let total_socio = 0;
+    let paragrafo = "<br/>";
+    let return_string = "<table style='width:100%,border: 1px solid black;'><tr><th>Itens</th><th>Quantidade</th><th>Valor/Unidade</th></tr>"; 
+
+    Object.entries(items).forEach(element => {
+        let item = element[1];
+        if(item.quantity != 0){
+            return_string += "<tr><td>"+element[0]+"</td><td>"+item.quantity+"</td><td>" + item.preco + "€</td></tr>"
+            total += item.preco * item.quantity;
+            total_socio += item.preco_socio * item.quantity;
+        }
+    });
+    return_string += "</table>";
+    return_string += "<h2>TOTAL:                    " + total + "€</h2>" + paragrafo;
+    return_string += "<h2>TOTAL(Sócio):             " + total_socio + "€</h2>"
+
+
+    return return_string;
 }
 
 function recalculate(){
     let desc = "";
     let preco = 0;
-    let preco_socio = 0;
-
+    let preco_socio = 0;  
+    
     Object.entries(items).forEach(element => {
-     let item = element[1];
+        let item = element[1];
       if(item.quantity != 0)
-          desc += element[0]  + " - " + item.quantity + "</p>";
+          desc += element[0]  + " - " + item.quantity + "<p/>";
 
       preco += Number(item.preco * item.quantity);
       preco_socio += (item.preco_socio * item.quantity);
