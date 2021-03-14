@@ -85,6 +85,18 @@
             "escola": "FEP"
         },
         {
+            "nome": "Tânia Santos",
+            "img_src": "tania_santos",
+            "padrinho": "Gonçalo Pereira",
+            "madrinha": "Rafaela Pereira",
+            "entrada": "2014",
+            "passagem": "2017",
+            "instrumento": "Pandeireta",
+            "naipe": "Soprano",
+            "curso": "Enfermagem",
+            "escola": "ESS-IPVC"
+        },
+        {
             "nome": "Catarina Castro",
             "img_src": "catarina_castro",
             "padrinho": "André Gomes",
@@ -119,30 +131,6 @@
             "naipe": "Soprano",
             "curso": "Engenharia Química",
             "escola": "FEUP"
-        },
-        {
-            "nome": "Diogo Santos",
-            "img_src": "diogo_santos",
-            "padrinho": "André Gomes",
-            "madrinha": "Patricia Azevedo",
-            "entrada": "2013",
-            "passagem": "2016",
-            "instrumento": "Guitarra",
-            "naipe": "Tenor",
-            "curso": "Enfermagem",
-            "escola": "ESEP"
-        },
-        {
-            "nome": "Tânia Santos",
-            "img_src": "tania_santos",
-            "padrinho": "Gonçalo Pereira",
-            "madrinha": "Rafaela Pereira",
-            "entrada": "2014",
-            "passagem": "2017",
-            "instrumento": "Pandeireta",
-            "naipe": "Soprano",
-            "curso": "Enfermagem",
-            "escola": "ESS-IPVC"
         },
         {
             "nome": "André Ramos",

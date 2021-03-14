@@ -4,6 +4,7 @@ import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Divider } from '@material-ui/core';
 
 import Card from "components/Card/Card.js";
 import "./Loja.css";
@@ -112,7 +113,9 @@ export default function Carrinho() {
                             <LabelCarrinho id="carrinho" variant="h4" align="center">
                             <b>Carrinho</b>
                             </LabelCarrinho> 
+                            <Divider></Divider>
                             <LabelDesc id="carrinho_desc" variant="h5" align="center"/> 
+                            <Divider></Divider>
                             <LabelTotal id="carrinho_total" variant="h4" align="center"/> 
                             <LabelTotal id="carrinho_total_socio" variant="h4" align="center"/> 
                             <CheckoutButton>
