@@ -9,7 +9,7 @@
             ],
             "descricao": "Pins oficiais da Tuna Académica de Oliveira do Douro",
             "preco": "1",
-            "preco_socio": "1",
+            "preco_socio": "",
             "olx_link": "",
             "email":{
                 "subject": "Encomenda de Pins"
@@ -24,7 +24,7 @@
             ],
             "descricao": "",
             "preco": "5",
-            "preco_socio": "5",
+            "preco_socio": "",
             "olx_link": "",
             "email":{
                 "subject": "Encomenda de Emblemas"
@@ -55,7 +55,7 @@
             ],
             "descricao": "",
             "preco": "10",
-            "preco_socio": "10",
+            "preco_socio": "",
             "olx_link": "",
             "email":{
                 "subject": "Encomenda de DVD - 6 Tunas D'Ouro"
@@ -70,7 +70,7 @@
             ],
             "descricao": "",
             "preco": "10",
-            "preco_socio": "10",
+            "preco_socio": "",
             "olx_link": "",
             "email":{
                 "subject": "Encomenda de DVD - XV Aniv"
