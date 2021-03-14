@@ -5,7 +5,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Divider } from '@material-ui/core';
-
+import { Link } from "react-router-dom";
 import Card from "components/Card/Card.js";
 import "./Loja.css";
 import "assets/scss/plugins/plugin-galeria.scss";
@@ -118,8 +118,8 @@ export default function Carrinho() {
                             <Divider></Divider>
                             <LabelTotal id="carrinho_total" variant="h4" align="center"/> 
                             <LabelTotal id="carrinho_total_socio" variant="h4" align="center"/> 
-                            <CheckoutButton>
-                            <b> Checkout </b>
+                            <CheckoutButton component={Link} to="/checkout">
+                           <b> Checkout</b> 
                             </CheckoutButton>
                        
                 </Card >
