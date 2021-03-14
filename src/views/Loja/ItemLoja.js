@@ -86,9 +86,9 @@ export default function ItemLoja(props) {
 
     const fotos = getImages();
 
-    const preco_socio = (item.preco_socio) ? ("Preço sócio:" + item.preco_socio):"";
+    const preco_socio = (item.preco_socio != item.preco) ? ("Preço sócio:" + item.preco_socio + "€"):"";
     const preco_n_socio = (        
-           "Preço: " + item.preco
+           "Preço: " + item.preco + "€"
     );
 
     let numero_items = 0;
@@ -107,7 +107,7 @@ export default function ItemLoja(props) {
 
     function updateValue(){
      document.getElementById("value_" + nome).innerHTML = numero_items;
-     refresh(nome,numero_items);
+     refresh(item,numero_items);
     }
 
     return (

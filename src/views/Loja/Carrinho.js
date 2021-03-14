@@ -14,35 +14,64 @@ const useStyles = makeStyles(styles);
 let items = {};
 
 export function refresh(item,quantity){
-    items[item] = quantity
+    let name = item.nome;
+    let preco = item.preco;
+    let preco_socio = item.preco_socio;
+    items[name] = {preco,preco_socio, quantity}
     recalculate()
 }
 
 function recalculate(){
-    let n_items = 0;
     let desc = "";
+    let preco = 0;
+    let preco_socio = 0;
 
     Object.entries(items).forEach(element => {
-      n_items += items[element[0]]
-      desc += element[0]  + " - " + items[element[0]] + "</p>";
+     let item = element[1];
+      if(item.quantity != 0)
+          desc += element[0]  + " - " + item.quantity + "</p>";
+
+      preco += Number(item.preco * item.quantity);
+      preco_socio += (item.preco_socio * item.quantity);
    });
    
-   document.getElementById("carrinho").innerHTML =  "<b>Carrinho: " + n_items + "</b>";
+   document.getElementById("carrinho").innerHTML =  "<b>Carrinho: </b>";
       
    document.getElementById("carrinho_desc").innerHTML =  desc;
-}
+         
+   document.getElementById("carrinho_total").innerHTML =  "Total: " + preco + "€";;
 
-function getDesc(){
-    
+   if(preco != preco_socio){
+    document.getElementById("carrinho_total_socio").innerHTML =  "Total para sócio: " + preco_socio + "€";
+   }else{
+    document.getElementById("carrinho_total_socio").innerHTML =  ""
+   }
 }
+const LabelCarrinho = withStyles({
+    root: {
+        color: "black",
+        marginTop: 40,
+    },
+})(Typography);
 
-const Label = withStyles({
+const LabelDesc= withStyles({
     root: {
         color: "black",
         marginLeft: 10,
         marginRight: 10,
         marginTop: 20,
         marginBotton: 20,
+      
+    },
+})(Typography);
+
+const LabelTotal = withStyles({
+    root: {
+        color: "black",
+        marginLeft: 10,
+        marginRight: 10,
+        marginTop: 20,
+        marginBotton: 50,
       
     },
 })(Typography);
@@ -62,9 +91,7 @@ const CheckoutButton = withStyles({
         color: "white",
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 10,
-        marginBotton: 100,
-      
+        marginTop: 10      
     },
 })(Button);
 
@@ -82,12 +109,12 @@ export default function Carrinho() {
         <GridItem >
                 <Card className={classes[cardAnimaton]}>
                     
-                            <Label id="carrinho" variant="h5" align="center">
-                            <b>Carrinho: 0 </b>
-                            </Label> 
-                            <Label id="carrinho_desc" variant="h5" align="center">
-                            {getDesc()}
-                            </Label> 
+                            <LabelCarrinho id="carrinho" variant="h4" align="center">
+                            <b>Carrinho</b>
+                            </LabelCarrinho> 
+                            <LabelDesc id="carrinho_desc" variant="h5" align="center"/> 
+                            <LabelTotal id="carrinho_total" variant="h4" align="center"/> 
+                            <LabelTotal id="carrinho_total_socio" variant="h4" align="center"/> 
                             <CheckoutButton>
                             <b> Checkout </b>
                             </CheckoutButton>
@@ -95,5 +122,4 @@ export default function Carrinho() {
                 </Card >
         </GridItem >
     )
-
 }
