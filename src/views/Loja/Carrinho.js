@@ -21,6 +21,9 @@ export function refresh(item,quantity){
     items[name] = {preco,preco_socio, quantity}
     recalculate()
 }
+export function getItems(){
+    return items;
+}
 
 function recalculate(){
     let desc = "";

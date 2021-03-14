@@ -16,6 +16,7 @@ import CheckoutFormError from "views/Loja/CheckoutFormError.js";
 import styles from "assets/jss/material-kit-react/views/checkoutForm.js";
 
 import image from "assets/img/loja/Emblema/emblemaTAOD2.jpg";
+import {getItems} from "./Carrinho.js";
 
 import { init, send } from 'emailjs-com';
 import { Button } from "@material-ui/core";
@@ -95,6 +96,7 @@ const SendButton = withStyles({
 })(Button);
 
 function sendEmail() {
+    console.log(getItems());
     send('default_service', 'template_kvzn3jo', CheckoutFormValues)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);

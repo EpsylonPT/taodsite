@@ -2,7 +2,9 @@ const formValues = {
     user_nome: '',
     user_email: '',
     user_telefone : '',
-    mensagem: ''
+    mensagem: '',
+    items: ''
+    
 }
 
 export default formValues;
