@@ -14,6 +14,7 @@ import AcercaPage from "views/SobreNosPage/SobreNosPage.js";
 import Premios from "views/SobreNosPage/Premios/Premios.js"
 import Membros from "views/SobreNosPage/Membros/Membros.js"
 import GaleriaPage from "views/Galeria/GaleriaPage.js";
+import CheckoutForm from "views/Loja/CheckoutForm.js";
 
 var hist = createBrowserHistory();
 
@@ -30,6 +31,7 @@ ReactDOM.render(
       <Route path="/loja" component={LojaPage} />
       <Route path="/contacto" component={ContactoPage} />
       <Route path="/socio" component={SocioPage} />
+      <Route path="/checkout" component={CheckoutForm} />
       <Route path={mainLink} component={LandingPage} />
     </Switch>
   </Router>,
