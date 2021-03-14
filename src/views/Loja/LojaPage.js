@@ -16,6 +16,7 @@ import data from "assets/json/loja.json"
 import image from "assets/img/loja/Emblema/emblemaTAOD2.jpg";
 
 import ItemLoja from "./ItemLoja.js"
+import Carrinho from "./Carrinho.js"
 
 const useStyles = makeStyles(styles);
 
@@ -54,6 +55,7 @@ export default function LojaPage() {
           <p></p>Se ainda não és sócio,  <Link style={{color: "#1DB954"}} to = "/socio">     <b>clica aqui</b> </Link>
           </Typography> 
           <GridContainer justify="center">
+           <Carrinho/>
             {items}
           </GridContainer>
         </div>
