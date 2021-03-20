@@ -20,13 +20,22 @@ import {getItems} from "./Carrinho.js";
 
 import { init, send } from 'emailjs-com';
 import { Button } from "@material-ui/core";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import ReCAPTCHA from "react-google-recaptcha";
 init("user_OPj3y91OjvXfVjAvC4H6F");
+
+const captchaKey = "6LfBeocaAAAAAF2JY93hxRBaHMaRqpliMNXlZtN9";
+var captchaPassed = false;
 
 const useStyles = makeStyles(styles);
 
 const TextFieldCheckout = withStyles((theme) => ({
     root: {
-        right: "40%",
+        right: "20%",
         '& > *': {
             margin: theme.spacing(1),
             width: '180%',
@@ -54,7 +63,7 @@ const TextFieldCheckout = withStyles((theme) => ({
 
 const TextFieldCheckoutMessage = withStyles((theme) => ({
     root: {
-        right: "40%",
+        right: "20%",
         height: "70",
         '& > *': {
 
@@ -95,18 +104,39 @@ const SendButton = withStyles({
     },
 })(Button);
 
-function sendEmail() {
-    CheckoutFormValues.itens = getItems();
-    send('default_service', 'template_kvzn3jo', CheckoutFormValues)
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-        }, function (error) {
-            console.log('FAILED...', error);
-        });
+
+function onChangeCaptcha(value) {
+    captchaPassed = true;
 }
 
 export default function CheckoutForm() {
     const classes = useStyles();
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = (text) => {
+        setOpen(true);
+      };
+    
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    function sendEmail() {
+        if(!captchaPassed){
+            handleClickOpen()
+            return;
+        }else{  
+            return;     
+        CheckoutFormValues.itens = getItems();
+        send('default_service', 'template_kvzn3jo', CheckoutFormValues)
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+        }
+    }
 
     return (
         <div>
@@ -140,9 +170,27 @@ export default function CheckoutForm() {
                             <TextFieldCheckoutMessage id="mensagem" type='text' name='mensagem' placeholder='Mensagem' label="Mensagem" variant="outlined" 
                             onChange={(e) => { CheckoutFormValues.message = e.target.value }} />
                             <br />
+                            <br />
+                            <ReCAPTCHA badge="inline" size="normal" sitekey={captchaKey} theme="dark" onChange={onChangeCaptcha} />
+                            <br />
                             <SendButton onClick={sendEmail}>Enviar</SendButton>
                         </form>
                     </GridContainer>
+                    <Dialog
+                        open={open}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert_description"
+                    >
+                        <DialogTitle id="alert-dialog-title">{"Aviso"}</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText id="alert_description">Por favor valide todos os dados e complete o reCaptcha.</DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button color="primary" onClick={handleClose} autoFocus>
+                                Ok
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
                 </div>
                 <Footer whiteFont />
             </div>
