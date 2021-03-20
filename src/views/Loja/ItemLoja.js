@@ -41,6 +41,7 @@ export default function ItemLoja(props) {
 
     const AddButton = withStyles({
         root: {
+            width: "20px",
             background: "#1DB954",
             borderRadius: 7,
             '&:hover': {
@@ -57,6 +58,7 @@ export default function ItemLoja(props) {
     })(Button);
     const RemoveButton = withStyles({
         root: {
+            width: "20px",
             background: "#1DB954",
             borderRadius: 7,
             '&:hover': {

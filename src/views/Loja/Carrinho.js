@@ -21,6 +21,7 @@ export function refresh(item,quantity){
     items[name] = {preco,preco_socio, quantity}
     recalculate()
 }
+
 export function getItems(){
     let total = 0;
     let total_socio = 0;
@@ -38,36 +39,40 @@ export function getItems(){
     return_string += "</table>";
     return_string += "<h2>TOTAL:                    " + total + "€</h2>" + paragrafo;
     return_string += "<h2>TOTAL(Sócio):             " + total_socio + "€</h2>"
-
-
     return return_string;
 }
 
-function recalculate(){
+function recalculate() {
     let desc = "";
     let preco = 0;
-    let preco_socio = 0;  
-    
+    let preco_socio = 0;
+
     Object.entries(items).forEach(element => {
         let item = element[1];
-      if(item.quantity != 0)
-          desc += element[0]  + " - " + item.quantity + "<p/>";
+        if (item.quantity != 0)
+            desc += "<p>" + element[0] + " - " + item.quantity + "</p>";
 
-      preco += Number(item.preco * item.quantity);
-      preco_socio += (item.preco_socio * item.quantity);
-   });
-   
-   document.getElementById("carrinho").innerHTML =  "<b>Carrinho: </b>";
-      
-   document.getElementById("carrinho_desc").innerHTML =  desc;
-         
-   document.getElementById("carrinho_total").innerHTML =  "Total: " + preco + "€";;
+        preco += Number(item.preco * item.quantity);
+        preco_socio += (item.preco_socio * item.quantity);
+    });
 
-   if(preco != preco_socio){
-    document.getElementById("carrinho_total_socio").innerHTML =  "Total para sócio: " + preco_socio + "€";
-   }else{
-    document.getElementById("carrinho_total_socio").innerHTML =  ""
-   }
+    document.getElementById("carrinho").innerHTML = "<b>Carrinho: </b>";
+    if (preco != 0) {
+        document.getElementById("checkout_button").setAttribute("class", "MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-115 MuiButton-text");
+        document.getElementById("carrinho_desc").innerHTML = desc;
+        document.getElementById("carrinho_total").innerHTML = "Total: " + preco + "€";
+        if (preco != preco_socio) {
+            document.getElementById("carrinho_total_socio").innerHTML = "Total para sócio: " + preco_socio + "€";
+        } else {
+            document.getElementById("carrinho_total_socio").innerHTML = ""
+        }
+    } else {
+        document.getElementById("checkout_button").setAttribute("class", "MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-115 MuiButton-text Mui-disabled Mui-disabled");
+        document.getElementById("carrinho_desc").innerHTML = "";
+        document.getElementById("carrinho_total").innerHTML = "";
+        document.getElementById("carrinho_total_socio").innerHTML = ""
+    }
+
 }
 const LabelCarrinho = withStyles({
     root: {
@@ -126,7 +131,6 @@ export default function Carrinho() {
         setCardAnimation("");
     }, 700);
     const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-
     return (
         <GridItem >
                 <Card className={classes[cardAnimaton]}>
@@ -139,7 +143,7 @@ export default function Carrinho() {
                             <Divider></Divider>
                             <LabelTotal id="carrinho_total" variant="h4" align="center"/> 
                             <LabelTotal id="carrinho_total_socio" variant="h4" align="center"/> 
-                            <CheckoutButton component={Link} to="/checkout">
+                            <CheckoutButton id="checkout_button" component={Link} to="/checkout" disabled >
                            <b> Checkout</b> 
                             </CheckoutButton>
                        
