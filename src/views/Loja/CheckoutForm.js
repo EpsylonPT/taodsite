@@ -20,13 +20,22 @@ import {getItems} from "./Carrinho.js";
 
 import { init, send } from 'emailjs-com';
 import { Button } from "@material-ui/core";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import ReCAPTCHA from "react-google-recaptcha";
 init("user_OPj3y91OjvXfVjAvC4H6F");
+
+const captchaKey = "6LfBeocaAAAAAF2JY93hxRBaHMaRqpliMNXlZtN9";
+var captchaPassed = false;
 
 const useStyles = makeStyles(styles);
 
 const TextFieldCheckout = withStyles((theme) => ({
     root: {
-        right: "40%",
+        right: "20%",
         '& > *': {
             margin: theme.spacing(1),
             width: '180%',
@@ -54,7 +63,7 @@ const TextFieldCheckout = withStyles((theme) => ({
 
 const TextFieldCheckoutMessage = withStyles((theme) => ({
     root: {
-        right: "40%",
+        right: "20%",
         height: "70",
         '& > *': {
 
@@ -95,14 +104,9 @@ const SendButton = withStyles({
     },
 })(Button);
 
-function sendEmail() {
-    CheckoutFormValues.itens = getItems();
-    send('default_service', 'template_kvzn3jo', CheckoutFormValues)
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-        }, function (error) {
-            console.log('FAILED...', error);
-        });
+
+function onChangeCaptcha(value) {
+    captchaPassed = true;
 }
 function changeName(e,setErrorNome){ 
     if (e.target.value == ''){
@@ -138,12 +142,51 @@ function changeTelefone(e,setErrorTelefone){
     }
 }
 
+function handleClickOpen(setOpen){
+    setOpen(true);
+}
+
+function handleClose(setOpen){
+    setOpen(false)
+}
 export default function CheckoutForm(props) {
     const [error_nome,setErrorNome] = React.useState("");
     const [error_email,setErrorEmail] = React.useState("");
     const [error_telefone,setErrorTelefone] = React.useState("");
+    const [open, setOpen] = React.useState(false);
 
     const classes = useStyles();
+
+    function sendEmail() {
+        const emailETelefoneNecessariosMessage = 'Email ou telefone necessários (pelo menos um dos dois)'
+        CheckoutFormValues.user_nome.length === 0 ? setErrorNome('Nome obrigatório') : setErrorNome("");
+      
+        if( (error_telefone !== emailETelefoneNecessariosMessage && error_telefone !== '') || (error_email !== emailETelefoneNecessariosMessage && error_email.length !== 0)  ){
+            handleClickOpen(setOpen)
+            return;
+        }
+        if(CheckoutFormValues.user_email.length === 0 && CheckoutFormValues.user_telefone.length === 0){
+            setErrorEmail(emailETelefoneNecessariosMessage)
+            setErrorTelefone(emailETelefoneNecessariosMessage)
+            return;
+        }
+        
+
+        if(!captchaPassed){
+            handleClickOpen(setOpen)
+            return;
+        }
+
+        CheckoutFormValues.itens = getItems();
+        send('default_service', 'template_kvzn3jo', CheckoutFormValues)
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+        }
+    
+
     return (
         <div>
             <HeaderPage change_height={50} />
@@ -176,9 +219,27 @@ export default function CheckoutForm(props) {
                             <TextFieldCheckoutMessage id="mensagem" type='text' name='mensagem' placeholder='Mensagem' label="Mensagem" variant="outlined" 
                             onChange={(e) => { CheckoutFormValues.message = e.target.value }} />
                             <br />
+                            <br />
+                            <ReCAPTCHA badge="inline" size="normal" sitekey={captchaKey} theme="dark" onChange={onChangeCaptcha} />
+                            <br />
                             <SendButton onClick={sendEmail}>Enviar</SendButton>
                         </form>
                     </GridContainer>
+                    <Dialog
+                        open={open}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert_description"
+                    >
+                        <DialogTitle id="alert-dialog-title">{"Aviso"}</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText id="alert_description">Por favor valide todos os dados e complete o reCaptcha.</DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button color="primary" onClick={(e) => {handleClose(setOpen)}} autoFocus>
+                                Ok
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
                 </div>
                 <Footer whiteFont />
             </div>
