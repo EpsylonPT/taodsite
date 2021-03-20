@@ -3,7 +3,7 @@ import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 // react components for routing our app without refresh
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 // core components
@@ -186,6 +186,9 @@ export default function CheckoutForm(props) {
             });
         }
     
+    if (getItems()=="") {
+            return <Redirect to='/loja'/>;
+    }
 
     return (
         <div>
