@@ -104,6 +104,7 @@ export default function MusicaCard(props) {
                 <Dialog id={"modal"}
                     open={isOpen}
                     style={{ backgroundColor: 'transparent' }}
+                    disableScrollLock 
                     onClose={handleDialogClose}
                     aria-labelledby="modal-slide-title"
                     aria-describedby="modal-slide-description"

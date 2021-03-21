@@ -39,6 +39,10 @@ export function getItems(){
     return_string += "</table>";
     return_string += "<h2>TOTAL:                    " + total + "€</h2>" + paragrafo;
     return_string += "<h2>TOTAL(Sócio):             " + total_socio + "€</h2>"
+
+    if(total == 0){
+        return "";
+    }
     return return_string;
 }
 
