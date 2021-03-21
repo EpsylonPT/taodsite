@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "assets/css/patrocinios.css"
 import patrocinios from "assets/json/patrocinios"
 import styles from "assets/jss/material-kit-react/views/socioPage.js";
+import Typography from '@material-ui/core/Typography';
+import { Divider } from '@material-ui/core';
 
 const carousel_settings = {
     dots: false,
@@ -27,10 +29,11 @@ function getImages() {
                 <a href={i.link} target="_blank">
                 <img src={foto} alt={index} className="slick-image" />
                 </a>
+                <Divider/>
                 <div id ="content"> 
-                <span>
+                <Typography variant="body1" align="center">
                     {i.desconto}
-                </span>
+                </Typography>
                 </div>
             </div>
         )
@@ -46,13 +49,13 @@ export default function Patrocinios(props) {
     const classes = useStyles();
     const { children, className, ...rest } = props;
     return (
-        <GridItem xs={12} sm={12} md={4}>
+        <div>
             <h2 className={classes.title}>Parceiros e Benefícios</h2>
-            <Card>
+            <Card style={{background:"#cfcfcf"}}>
                 <Slider {...carousel_settings} className="slick-slider">
                     {fotos}
                 </Slider>
             </Card>
-        </GridItem>
+        </div>
     );
 }

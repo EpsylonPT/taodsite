@@ -69,7 +69,9 @@ export default function LandingPage() {
                 <br />
                 <DownloadButton href={ficha_socio} download="Ficha-de-socio">Download Ficha de sócio</DownloadButton>
               </GridItem>
-            <Patrocinios></Patrocinios>
+              <GridItem xs={12} sm={12} md={4}>
+                 <Patrocinios></Patrocinios>
+              </GridItem>
             </GridContainer>
           </div>
         </div>

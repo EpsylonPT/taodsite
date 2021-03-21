@@ -47,7 +47,7 @@ export default function LandingPage() {
           <div className={classes.container} >
             <div style={{top: 50}}>
               <GridContainer  alignItems="center"  justify="center">
-                <GridItem xs={12}>
+                <GridItem style={{marginTop: "10%"}} xs={12}>
                   <h1 className={classes.title}>Website oficial da Tuna</h1>
                   <h4>
                   Bem vindo ao site oficial da melhor tuna de Oliveira do Douro. 
@@ -55,7 +55,9 @@ export default function LandingPage() {
                   </h4>
                   <br />
                 </GridItem>
-                <Patrocinios></Patrocinios>
+                <GridItem style={{marginTop: 500}} xs={12} sm={12} md={4}>
+                   <Patrocinios ></Patrocinios>
+                </GridItem>
               </GridContainer>
             </div>
           </div>
