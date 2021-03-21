@@ -76,7 +76,8 @@ export default function GaleriaCard(props) {
                 </button>
                 <Dialog id={"modal"}
                     open={isOpen}
-                    style={{ backgroundColor: 'transparent' }}
+                    style={{ backgroundColor: 'transparent'}}
+                    disableScrollLock 
                     onClose={handleDialogClose}
                     aria-labelledby="modal-slide-title"
                     aria-describedby="modal-slide-description"

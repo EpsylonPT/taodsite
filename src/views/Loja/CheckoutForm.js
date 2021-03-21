@@ -234,6 +234,7 @@ export default function CheckoutForm(props) {
                     </GridContainer>
                     <Dialog
                         open={open}
+                        disableScrollLock 
                         aria-labelledby="alert-dialog-title"
                         aria-describedby="alert_description"
                     >
