@@ -2,11 +2,39 @@
     "items": [
         {
             "nome": "Total centro de Estudo",
-            "foto": "total_centro_estudo"
+            "foto": "total_centro_estudo.jpg",
+            "desconto": "10€ de desconto na mensalidade",
+            "link": "https://www.facebook.com/centrodeestudostotal/"
         },
          {
-            "nome": "Euro Soccer",
-            "foto": "euro_soccer"
+            "nome": "Bicademia",
+            "foto": "bicademia.jpg",
+            "desconto": "valor da mensalidade de 25€ para acesso livre ao ginásio, com exceção de aulas de kickboxing (este valor não inclui seguro, mas contempla a oferta do valor de inscrição)",
+            "link": "https://www.facebook.com/bicademiaginasiolda/"
+        },
+        {
+            "nome": "Alfredo Moreira Fonseca",
+            "foto": "alfredo_moreira_fonseca.jpg",
+            "desconto": "5 a 10 % de desconto em compras efetuadas no Alfredo Moreira Fonseca",
+            "link": "https://www.facebook.com/Alfredo-Moreira-da-Fonseca-455567971204925/"
+        },
+        {
+            "nome": "Clínica Dentária Silvia Baptista",
+            "foto": "clinica_dentaria_silvia_baptista.png",
+            "desconto": "10% de desconto em todos as consultas/tratamentos (não acumulável com outros descontos)",
+            "link": ""
+        },
+        {
+            "nome": "Farmácia Alves de Oliveira",
+            "foto": "farmacia_alves_oliveira.png",
+            "desconto": "10% de desconto em todos os produtos/compras (não acumulável com outros descontos)",
+            "link": "https://www.farmaciasdeservico.net/f/20117/Farmacia_Alves_de_Oliveira/"
+        },
+        {
+            "nome": "Douroluz",
+            "foto": "douroluz.png",
+            "desconto": "10% de desconto em todos os produtos/compras (não acumulável com outros descontos)",
+            "link": "https://www.farmaciasdeservico.net/f/20117/Farmacia_Alves_de_Oliveira/"
         }
     ]
 }

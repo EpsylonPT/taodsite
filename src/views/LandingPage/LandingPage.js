@@ -17,6 +17,7 @@ import "assets/scss/plugins/plugin-galeria.scss";
 import image from "assets/img/eventos/1.jpg"
 
 import patrocinios from "assets/json/patrocinios"
+import Patrocinios from "components/Patrocinios/Patrocinios";
 
 const useStyles = makeStyles(styles);
 
@@ -29,20 +30,6 @@ const useStyles = makeStyles(styles);
         autoplay: true,
         focusOnSelect: true
     };
-
-function getImages() {
-        var result = patrocinios.items.map(function (i, index) {
-            var foto = require("assets/img/patrocinios/" + i.foto + ".jpg");
-            return (
-                <div>
-                    <img src={foto} alt={index} className="slick-image" />
-                </div>
-            )
-        })
-        return result;
-    }
-
-const fotos = getImages();
 
 export default function LandingPage() {
   const classes = useStyles();
@@ -68,14 +55,7 @@ export default function LandingPage() {
                   </h4>
                   <br />
                 </GridItem>
-                <GridItem  style={{marginTop: 700}} xs={12} sm={12} md={4}>
-                <h2 className={classes.title}>Parceiros e Benefícios</h2>
-                <Card>
-                    <Slider {...carousel_settings} className="slick-slider">
-                        {fotos}
-                    </Slider>
-                </Card>
-                </GridItem>
+                <Patrocinios></Patrocinios>
               </GridContainer>
             </div>
           </div>

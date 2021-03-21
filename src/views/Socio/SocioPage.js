@@ -16,6 +16,7 @@ import ficha_socio from "assets/word/Ficha-de-Sócio.docx";
 import image from "assets/img/eventos/1.jpg"
 
 import patrocinios from "assets/json/patrocinios"
+import Patrocinios from "components/Patrocinios/Patrocinios";
 
 const useStyles = makeStyles(styles);
 
@@ -33,30 +34,6 @@ const DownloadButton = withStyles({
   },
 })(Button);
 
-const carousel_settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  focusOnSelect: true
-};
-
-
-function getImages() {
-  var result = patrocinios.items.map(function (i, index) {
-    var foto = require("assets/img/patrocinios/" + i.foto + ".jpg");
-    return (
-      <div>
-        <img src={foto} alt={index} className="slick-image" />
-      </div>
-    )
-  })
-  return result;
-}
-
-const fotos = getImages();
 
 export default function LandingPage() {
   const classes = useStyles();
@@ -92,14 +69,7 @@ export default function LandingPage() {
                 <br />
                 <DownloadButton href={ficha_socio} download="Ficha-de-socio">Download Ficha de sócio</DownloadButton>
               </GridItem>
-              <GridItem xs={12} sm={12} md={4}>
-                <h2 className={classes.title}>Parceiros e Benefícios</h2>
-                <Card>
-                  <Slider {...carousel_settings} className="slick-slider">
-                    {fotos}
-                  </Slider>
-                </Card>
-              </GridItem>
+            <Patrocinios></Patrocinios>
             </GridContainer>
           </div>
         </div>

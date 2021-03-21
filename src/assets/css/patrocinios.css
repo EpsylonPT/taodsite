@@ -1,0 +1,20 @@
+body {
+  font: 36px Arial, sans-serif;
+}
+
+#container {
+  color: white;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  background: #06c;
+}
+
+.slick-image{
+    height: 300px;
+    width: 300px;
+}
