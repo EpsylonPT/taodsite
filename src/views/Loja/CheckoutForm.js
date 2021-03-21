@@ -118,6 +118,7 @@ function changeName(e,setErrorNome){
 }
 function changeEmail(e,setErrorEmail){ 
     if(e.target.value == ''){
+        CheckoutFormValues.user_email = e.target.value;
         setErrorEmail('');
         return;
     }
@@ -132,6 +133,7 @@ function changeEmail(e,setErrorEmail){
 
 function changeTelefone(e,setErrorTelefone){ 
     if(e.target.value == ''){
+        CheckoutFormValues.user_telefone = e.target.value; 
         setErrorTelefone('');
         return;
     }
@@ -174,12 +176,11 @@ export default function CheckoutForm(props) {
             return;
         }
        
-        
-
         if(!captchaPassed){
             handleClickOpen(setOpen)
             return;
         }
+
         CheckoutFormValues.itens = getItems();
         send('default_service', 'template_kvzn3jo', CheckoutFormValues)
             .then(function (response) {
@@ -219,7 +220,7 @@ export default function CheckoutForm(props) {
                             <TextFieldCheckout id="email" type='text' name='user_email' placeholder='Email' label="Email" variant="outlined" 
                             onChange={(e) => { changeEmail(e,setErrorEmail) }} error={error_email.length === 0 ? false : true  } helperText={error_email}  onKeyUp={(e) => {changeEmail(e,setErrorEmail)}}/>
                             <br />
-                            <TextFieldCheckout id="telefone" type='text' name='user_telefone' placeholder='Telefone' label="Telefone" variant="outlined" 
+                            <TextFieldCheckout id="telefone" type='text' name='user_telefone' placeholder='Telemovel' label="Telemovel" variant="outlined" 
                             onChange={(e) => { changeTelefone(e,setErrorTelefone)}} error={error_telefone.length === 0 ? false : true  } helperText={error_telefone} onKeyUp={(e) => { changeTelefone(e,setErrorTelefone)}} />
                             <br />
                             <TextFieldCheckoutMessage id="mensagem" type='text' name='mensagem' placeholder='Mensagem' label="Mensagem" variant="outlined" 
