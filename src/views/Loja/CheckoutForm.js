@@ -122,6 +122,7 @@ function changeEmail(e,setErrorEmail){
         return;
     }
     if (!validator.isEmail(e.target.value)){
+        CheckoutFormValues.user_email = e.target.value; 
         setErrorEmail('Email Inválido');
     }else{
         CheckoutFormValues.user_email = e.target.value; 
@@ -135,6 +136,7 @@ function changeTelefone(e,setErrorTelefone){
         return;
     }
     if (!validator.isMobilePhone(e.target.value,['pt-PT'])){
+        CheckoutFormValues.user_telefone = e.target.value; 
         setErrorTelefone('Telefone Inválido');
     }else{
         CheckoutFormValues.user_telefone = e.target.value; 
@@ -158,25 +160,26 @@ export default function CheckoutForm(props) {
     const classes = useStyles();
 
     function sendEmail() {
-        const emailETelefoneNecessariosMessage = 'Email ou telefone necessários (pelo menos um dos dois)'
+        const emailETelefoneNecessariosMessage = 'Email ou telefone necessários'
         CheckoutFormValues.user_nome.length === 0 ? setErrorNome('Nome obrigatório') : setErrorNome("");
       
-        if( (error_telefone !== emailETelefoneNecessariosMessage && error_telefone !== '') || (error_email !== emailETelefoneNecessariosMessage && error_email.length !== 0)  ){
-            handleClickOpen(setOpen)
-            return;
-        }
         if(CheckoutFormValues.user_email.length === 0 && CheckoutFormValues.user_telefone.length === 0){
             setErrorEmail(emailETelefoneNecessariosMessage)
             setErrorTelefone(emailETelefoneNecessariosMessage)
             return;
         }
+
+        if( (error_telefone !== emailETelefoneNecessariosMessage && error_telefone !== '') || (error_email !== emailETelefoneNecessariosMessage && error_email.length !== 0)  ){
+            handleClickOpen(setOpen)
+            return;
+        }
+       
         
 
         if(!captchaPassed){
             handleClickOpen(setOpen)
             return;
         }
-
         CheckoutFormValues.itens = getItems();
         send('default_service', 'template_kvzn3jo', CheckoutFormValues)
             .then(function (response) {
@@ -210,14 +213,14 @@ export default function CheckoutForm(props) {
                     </Typography>
                     <GridContainer justify="center">
                         <form id='checkout-form' className={classes.root} noValidate autoComplete="off">
-                            <TextFieldCheckout id="nome" type='text' name='user_nome' placeholder='Nome' label="Nome" variant="outlined" 
-                                onChange={(e) => {changeName(e,setErrorNome)}} error={error_nome.length === 0 ? false : true  } helperText={error_nome}/>
+                            <TextFieldCheckout id="nome" type='text' name='user_nome' placeholder='Nome' label="Nome" variant="outlined"  
+                                onChange={(e) => {changeName(e,setErrorNome)}} error={error_nome.length === 0 ? false : true  } helperText={error_nome} onKeyUp={(e) => {changeName(e,setErrorNome)}}/>
                             <br />
                             <TextFieldCheckout id="email" type='text' name='user_email' placeholder='Email' label="Email" variant="outlined" 
-                            onChange={(e) => { changeEmail(e,setErrorEmail) }} error={error_email.length === 0 ? false : true  } helperText={error_email} />
+                            onChange={(e) => { changeEmail(e,setErrorEmail) }} error={error_email.length === 0 ? false : true  } helperText={error_email}  onKeyUp={(e) => {changeEmail(e,setErrorEmail)}}/>
                             <br />
                             <TextFieldCheckout id="telefone" type='text' name='user_telefone' placeholder='Telefone' label="Telefone" variant="outlined" 
-                            onChange={(e) => { changeTelefone(e,setErrorTelefone)}} error={error_telefone.length === 0 ? false : true  } helperText={error_telefone}/>
+                            onChange={(e) => { changeTelefone(e,setErrorTelefone)}} error={error_telefone.length === 0 ? false : true  } helperText={error_telefone} onKeyUp={(e) => { changeTelefone(e,setErrorTelefone)}} />
                             <br />
                             <TextFieldCheckoutMessage id="mensagem" type='text' name='mensagem' placeholder='Mensagem' label="Mensagem" variant="outlined" 
                             onChange={(e) => { CheckoutFormValues.message = e.target.value }} />
