@@ -45,7 +45,7 @@ export default function LandingPage() {
         }}
       >
           <div className={classes.container} >
-            <div style={{top: 50}}>
+            <div style={{top: 25}}>
               <GridContainer  alignItems="center"  justify="center">
                 <GridItem style={{marginTop: "10%"}} xs={12}>
                   <h1 className={classes.title}>Website oficial da Tuna</h1>
@@ -55,7 +55,7 @@ export default function LandingPage() {
                   </h4>
                   <br />
                 </GridItem>
-                <GridItem style={{marginTop: 500}} xs={12} sm={12} md={4}>
+                <GridItem xs={12} sm={12} md={4}>
                    <Patrocinios ></Patrocinios>
                 </GridItem>
               </GridContainer>

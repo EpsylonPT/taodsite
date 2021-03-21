@@ -24,7 +24,7 @@ function getImages(evento) {
             var foto = require("assets/img/eventos/" + i.nome + i.imageName);
             return (
                 <div key={foto}>
-                    <img key={foto} src={foto} alt={index} className="slick-image" />
+                    <img key={foto} src={foto} alt={index} className="slick-image-galeria" />
                 </div>
             )
         }
