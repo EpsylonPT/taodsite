@@ -1,5 +1,11 @@
 .slick-slider {
+    box-sizing: border-box ;
     position: relative
+ }
+
+ .slick-image{
+    height: auto!important; 
+    width: auto !important;
  }
 
  .slick-dots{

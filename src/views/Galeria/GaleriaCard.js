@@ -66,7 +66,7 @@ export default function GaleriaCard(props) {
         dots: true,
         slidesToShow: 1,
         speed: 500,
-        autoplay: true
+        autoplay: true,
     };
     const { evento } = props;
     const fotos = getImages(evento);
