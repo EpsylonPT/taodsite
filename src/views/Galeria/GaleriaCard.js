@@ -1,18 +1,18 @@
 import React from "react";
 import {makeStyles } from "@material-ui/core/styles";
 // react component for creating beautiful carousel
-import Carousel from "react-slick";
+import Slider from "react-slick";
 // material-ui components
 // @material-ui/icons
 import styles from "assets/jss/material-kit-react/views/galeriaPage.js";
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import data from "assets/json/galeria.json"
 import "assets/scss/plugins/plugin-galeria.scss";
 import DialogContent from "@material-ui/core/DialogContent";
 import Dialog from "@material-ui/core/Dialog";
+import "./Galeria.css";
 
 
 const useStyles = makeStyles(styles);
@@ -57,6 +57,15 @@ export default function GaleriaCard(props) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        textAlign:'center'
+    };
+    const settings2 = {
+        infinite: true,
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        speed: 500,
         autoplay: true
     };
     const { evento } = props;
@@ -66,40 +75,30 @@ export default function GaleriaCard(props) {
     return (
         <GridItem xs={12} sm={12} md={4} id={"gridItem_" + evento}>
             <Card className={classes[cardAnimaton]} id={"card_" + evento}>
-                <Carousel {...settings} className="slick-slider">
+            <Slider {...settings}>
                     {fotos}
-                </Carousel>
+            </Slider>
                 <button onClick={() => handleDialogOpen("ax", "asx", "asd", "asd")}>
                     <div style={textStyle}>
                         {evento}
                     </div>
                 </button>
                 <Dialog id={"modal"}
+                     
                     open={isOpen}
-                    style={{ backgroundColor: 'transparent'}}
+                    style={{ backgroundColor: 'transparent',textAlign:'center'}}
                     disableScrollLock 
                     onClose={handleDialogClose}
                     aria-labelledby="modal-slide-title"
                     aria-describedby="modal-slide-description"
-                    maxWidth="sm"
+                    maxWidth="md"
                     overlaystyle={{ backgroundColor: 'transparent' }
                     }
                 >
-                    <DialogContent dividers
-                        id="modal-slide-description"
-                        className={classes.modalBody}
-                    >
-                        <GridContainer>
-                            <GridItem>
-                                <Card>
-                                    <Carousel {...settings} className="slick-slider">
-                                        {fotos}
-                                    </Carousel>
-                                </Card>
-                            </GridItem>
-                        </GridContainer>
-                        <p />
-                    </DialogContent>
+                  <Slider {...settings2} class="slick-slider">
+                    {fotos}
+                  </Slider>           
+                 
                 </Dialog >
             </Card>
         </GridItem >
