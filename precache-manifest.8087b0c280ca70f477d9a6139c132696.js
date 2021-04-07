@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35f53b11d3d6b7d5225b98a897fbd630",
+    "revision": "8532fefea4baa3fe5ff83fcc794f3aa0",
     "url": "/taodsite/index.html"
   },
   {
-    "revision": "a974e27a2547627c7149",
-    "url": "/taodsite/static/css/main.8c137f6f.chunk.css"
+    "revision": "11f3f878f99de069f71e",
+    "url": "/taodsite/static/css/main.1c40f4fb.chunk.css"
   },
   {
-    "revision": "519c1e501adc7e501f69",
-    "url": "/taodsite/static/js/2.dc761e45.chunk.js"
+    "revision": "0ed5c1785fd1421cc231",
+    "url": "/taodsite/static/js/2.eea372dc.chunk.js"
   },
   {
     "revision": "0bf38cf6c0b51ec69d7a52e8875a6dbf",
-    "url": "/taodsite/static/js/2.dc761e45.chunk.js.LICENSE.txt"
+    "url": "/taodsite/static/js/2.eea372dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a974e27a2547627c7149",
-    "url": "/taodsite/static/js/main.60832182.chunk.js"
+    "revision": "11f3f878f99de069f71e",
+    "url": "/taodsite/static/js/main.a56cdab1.chunk.js"
   },
   {
     "revision": "9b7f4289563fe7941f19",
@@ -660,6 +660,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taodsite/static/media/XVAniversario2.65af906f.jpg"
   },
   {
+    "revision": "cce527c9a39bcfd36dd0604ef4c0e4cf",
+    "url": "/taodsite/static/media/alfredo_moreira_fonseca.cce527c9.jpg"
+  },
+  {
     "revision": "a954353f6baa80e6a05915d371523738",
     "url": "/taodsite/static/media/ana_baptista.a954353f.jpg"
   },
@@ -686,6 +690,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ec0aa6dbe21d2ce6ccc03558282d753e",
     "url": "/taodsite/static/media/armando.ec0aa6db.jpg"
+  },
+  {
+    "revision": "8f0bb29f8aae08a2518ba48e587bf752",
+    "url": "/taodsite/static/media/bicademia.8f0bb29f.jpg"
   },
   {
     "revision": "592dba409f100c1b93b2a1673f8346df",
@@ -736,6 +744,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taodsite/static/media/diogo_santos.ad366687.jpg"
   },
   {
+    "revision": "078cae5c2130b89ebe4023ddb9e17a23",
+    "url": "/taodsite/static/media/douroluz.078cae5c.png"
+  },
+  {
     "revision": "c87b9462bb95622dcd3ac5cd996d0c94",
     "url": "/taodsite/static/media/emblemaTAOD.c87b9462.jpg"
   },
@@ -746,6 +758,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b5416a5559b35a7bb2035698b9e7252a",
     "url": "/taodsite/static/media/fabio_pinto.b5416a55.jpg"
+  },
+  {
+    "revision": "e2033a5799b2790a26c36acc640e2a33",
+    "url": "/taodsite/static/media/farmacia_alves_oliveira.e2033a57.png"
   },
   {
     "revision": "cec17a9f7d17b949f23949976204217f",
