@@ -4,8 +4,11 @@
  }
 
  .slick-image-galeria{
-    height: auto!important; 
-    width: auto !important;
+    display: block;
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+    object-position: center center;
  }
 
  .slick-dots{

@@ -75,7 +75,7 @@ export default function GaleriaCard(props) {
     return (
         <GridItem xs={12} sm={12} md={4} id={"gridItem_" + evento}>
             <Card className={classes[cardAnimaton]} id={"card_" + evento}>
-            <Slider {...settings}>
+            <Slider className="slick-slider" {...settings}>
                     {fotos}
             </Slider>
                 <button onClick={() => handleDialogOpen("ax", "asx", "asd", "asd")}>
