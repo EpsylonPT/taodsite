@@ -1,17 +1,61 @@
-#content {
+#name {
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#content {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   padding-bottom: 10%;
   padding-left: 10%;
   padding-right: 10%;
 }
 
+#container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: #cfcfcf;
+  display: flex;
+}
 
-.slick-image{
-    height: 300px;
-    width: 300px;
+#element {
+  width: 10px;
+  height: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.slick-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.patrocinio_container {
+ height: 35vh;
+ display: flex;
+ overflow: visible;
+ justify-content: center;
+ align-items: center;
+}
+
+.patrocinio_image {
+  width: 90%;
+  height: 90%;
+}
+
+.slick-list {
+  margin: 0 2px;
 }

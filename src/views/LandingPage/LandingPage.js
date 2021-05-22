@@ -9,27 +9,14 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderPage from "views/HeaderPage.js";
-import Slider from "react-slick";
-import Card from "components/Card/Card.js";
 import styles from "assets/jss/material-kit-react/views/cancioneiroPage.js";
 import "assets/scss/plugins/plugin-galeria.scss";
 
 import image from "assets/img/eventos/1.jpg"
 
-import patrocinios from "assets/json/patrocinios"
 import Patrocinios from "components/Patrocinios/Patrocinios";
 
 const useStyles = makeStyles(styles);
-
-  const carousel_settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        focusOnSelect: true
-    };
 
 export default function LandingPage() {
   const classes = useStyles();
@@ -55,10 +42,8 @@ export default function LandingPage() {
                   </h4>
                   <br />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                   <Patrocinios ></Patrocinios>
-                </GridItem>
               </GridContainer>
+              <Patrocinios/>
             </div>
           </div>
           <Footer whiteFont />

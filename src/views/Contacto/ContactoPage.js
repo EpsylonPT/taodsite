@@ -70,7 +70,6 @@ export default function ContactoPage() {
             </Typography> 
           <Typography variant="h5" align="left">
           Sede:   <b >Praceta Dina Teresa 4430-378, Vila Nova de Gaia</b> <p/>
-          Ensaios: <b>Sexta-Feira - 21:30 </b>
           </Typography> 
           </div>
           <MapsButton target="_blank" href="https://goo.gl/maps/sGVXEkax9VtcFK4k9">Google Maps</MapsButton>
