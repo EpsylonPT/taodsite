@@ -83,19 +83,16 @@ export default function GaleriaCard(props) {
                         {evento}
                     </div>
                 </button>
-                <Dialog id={"modal"}
-                     
+                <Dialog id={"modal"}   
                     open={isOpen}
-                    style={{ backgroundColor: 'transparent',textAlign:'center'}}
+                    className="dialog"
                     disableScrollLock 
                     onClose={handleDialogClose}
                     aria-labelledby="modal-slide-title"
                     aria-describedby="modal-slide-description"
                     maxWidth="md"
-                    overlaystyle={{ backgroundColor: 'transparent' }
-                    }
                 >
-                  <Slider {...settings2} class="slick-slider">
+                  <Slider {...settings2} class="slick-slider-zoom">
                     {fotos}
                   </Slider>           
                  

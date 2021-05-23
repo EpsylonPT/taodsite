@@ -53,7 +53,7 @@ export default function LandingPage() {
             <GridContainer alignItems="center" justify="center">
               <GridItem xs={12}>
                 <br />
-                <h1 className={classes.title}>Torna-te Socio desta tuna!</h1>
+                <h1 className={classes.title}>Torna-te sócio desta tuna!</h1>
                 <h4>
                   Antes de te tornares sócio da tuna lê os termos e condições!
                   </h4>

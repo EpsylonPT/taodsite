@@ -40,15 +40,16 @@ export default function LandingPage() {
             <div style={{top: 25}}>
               <GridContainer  alignItems="center"  justify="center">
                 <GridItem style={{marginTop: "10%"}} xs={12}>
-                  <h1 className={classes.title}>A Tuna Académica de Oliveira do Douro dá as boas-vindas ao seu site oficial!</h1>
-                  <h4>
-                  A Tuna Académica de Oliveira do Douro dá as boas-vindas ao seu site oficial!
+                  <h2 className={classes.title}>A Tuna Académica de Oliveira do Douro dá as boas-vindas ao seu site oficial!</h2>
+                  <h4 style={{marginTop: "2%"}}>
+                  A Tuna Académica de Oliveira do Douro dá as boas-vindas ao seu site oficial!<br/>
 Já contamos com {anosDaTuna()} anos de muita música, companheirismo, amizade, brindes e muitos palcos pisados...
-Vem conhecer esta tuna tão particular e fica a par de todas as novidades...
+<br/>Vem conhecer esta tuna tão particular e fica a par de todas as novidades...
                   </h4>
                   <br />
                 </GridItem>
               </GridContainer>
+              <div style={{marginTop: "20vh"}}></div>
               <Patrocinios/>
             </div>
           </div>

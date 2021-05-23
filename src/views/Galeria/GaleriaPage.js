@@ -44,7 +44,7 @@ export default function GaleriaPage() {
                 <div className={classes.container}>
                 <h2>Galeria</h2>
                 <Typography variant="h5" align="center">
-                    Clique nos titulos para ampliar as fotos
+                    Clique nos títulos para ampliar as fotos
                 </Typography> 
                     <GridContainer>
                        {fotos}

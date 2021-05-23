@@ -118,7 +118,7 @@ export default function ItemLoja(props) {
                 <GridContainer justify="center">
                     <GridItem xs={6} id={"gridItem_" + nome}>
                         <div id={"card_" + nome} className="imageCard">
-                            <Slider {...carousel_settings} className="slick-slider">
+                            <Slider {...carousel_settings} className="slick-slider-2">
                                 {fotos}
                             </Slider>
                         </div>

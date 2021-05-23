@@ -16,9 +16,6 @@ import Menu from "@material-ui/icons/Menu";
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 import { Link } from "react-router-dom";
 
-import icon from "assets/img/headerIcon.png"
-
-
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
@@ -56,7 +53,7 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
+  const { icon,color, rightLinks, leftLinks, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -72,7 +69,7 @@ export default function Header(props) {
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
-        <img src={icon}/>
+        {icon}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (
             <Hidden smDown implementation="css">

@@ -32,10 +32,9 @@ export default function Footer(props) {
         <div className={classes.left}>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-
-          Comuna e João Vitor (O morto)
+          &copy; {1900 + new Date().getYear()} , made by{" "}
+         Tuna Académica de Oliveira do Douro
+         (Comuna e 12)
         </div>
       </div>
     </footer>
