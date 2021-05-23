@@ -18,6 +18,11 @@ import Patrocinios from "components/Patrocinios/Patrocinios";
 
 const useStyles = makeStyles(styles);
 
+function anosDaTuna(){
+  var today = new Date();
+  return parseInt(today.getFullYear()) - 2001 
+}
+
 export default function LandingPage() {
   const classes = useStyles();
   return (
@@ -35,10 +40,11 @@ export default function LandingPage() {
             <div style={{top: 25}}>
               <GridContainer  alignItems="center"  justify="center">
                 <GridItem style={{marginTop: "10%"}} xs={12}>
-                  <h1 className={classes.title}>Website oficial da Tuna</h1>
+                  <h1 className={classes.title}>A Tuna Académica de Oliveira do Douro dá as boas-vindas ao seu site oficial!</h1>
                   <h4>
-                  Bem vindo ao site oficial da melhor tuna de Oliveira do Douro. 
-                  Aqui poderás encontrar informações irrelevantes para a tua vida mas ficas a conhecer a tuna e de como te tornares parte dela!
+                  A Tuna Académica de Oliveira do Douro dá as boas-vindas ao seu site oficial!
+Já contamos com {anosDaTuna()} anos de muita música, companheirismo, amizade, brindes e muitos palcos pisados...
+Vem conhecer esta tuna tão particular e fica a par de todas as novidades...
                   </h4>
                   <br />
                 </GridItem>

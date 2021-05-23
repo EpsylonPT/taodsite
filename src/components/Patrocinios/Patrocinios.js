@@ -5,6 +5,7 @@ import "assets/css/patrocinios.css"
 import patrocinios from "assets/json/patrocinios"
 import Typography from '@material-ui/core/Typography';
 import { Divider } from '@material-ui/core';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 const carousel_settings = {
     dots: false,
@@ -12,7 +13,17 @@ const carousel_settings = {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    focusOnSelect: true
+};
+
+const carousel_settings_mobile = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
     focusOnSelect: true
 };
 
@@ -21,10 +32,10 @@ function getImages() {
         var foto = require("assets/img/patrocinios/" + i.foto);
         return (
             <div id="element" key={i.nome}>
-                 <a href={i.link} target="_blank">      
-                <div className="patrocinio_container">
-                <img src={foto} alt={index} className="patrocinio_image"/>
-                </div>
+                <a href={i.link} target="_blank">
+                    <div className="patrocinio_container">
+                        <img src={foto} alt={index} className="patrocinio_image" />
+                    </div>
                 </a>
                 <div id="name">
                     <Typography variant="button" align="center">
@@ -49,13 +60,27 @@ const fotos = getImages();
 export default function Patrocinios(props) {
     const { children, className, ...rest } = props;
     return (
-        <Paper >
-            <h2>Parceiros e Benefícios</h2>
-            <div id="container">
-                <Slider {...carousel_settings} >
-                    {fotos}
-                </Slider>
-            </div>
-        </Paper>
+        <>
+            <BrowserView>
+                <Paper>
+                    <h2>Parceiros e Benefícios</h2>
+                    <div id="container">
+                        <Slider {...carousel_settings} >
+                            {fotos}
+                        </Slider>
+                    </div>
+                </Paper>
+            </BrowserView>
+            <MobileView>
+                <Paper>
+                    <h2>Parceiros e Benefícios</h2>
+                    <div id="container">
+                        <Slider {...carousel_settings_mobile} >
+                            {fotos}
+                        </Slider>
+                    </div>
+                </Paper>
+            </MobileView>
+        </>
     );
 }
