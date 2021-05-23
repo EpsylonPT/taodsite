@@ -64,7 +64,7 @@ export default function Header(props) {
     [classes.fixed]: fixed
   });
   const brandComponent =
-    <Link to="/taodsite" className={classes.title}>
+    <Link to="/" className={classes.title}>
       {brand}
     </Link>
 
