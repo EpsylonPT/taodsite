@@ -90,9 +90,8 @@ const LabelDesc= withStyles({
         color: "black",
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 20,
-        marginBotton: 20,
-      
+        marginTop: 10,
+        marginBotton: 10,
     },
 })(Typography);
 
@@ -101,8 +100,8 @@ const LabelTotal = withStyles({
         color: "black",
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 20,
-        marginBotton: 50,
+        marginTop: 10,
+        marginBotton: 10,
       
     },
 })(Typography);
@@ -122,7 +121,8 @@ const CheckoutButton = withStyles({
         color: "white",
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 10      
+        marginTop: 10,
+        marginBottom: 10 
     },
 })(Button);
 
@@ -138,13 +138,10 @@ export default function Carrinho() {
     return (
         <GridItem >
                 <Card className={classes[cardAnimaton]}>
-                    
                             <LabelCarrinho id="carrinho" variant="h4" align="center">
                             <b>Carrinho</b>
                             </LabelCarrinho> 
-                            <Divider></Divider>
                             <LabelDesc id="carrinho_desc" variant="h5" align="center"/> 
-                            <Divider></Divider>
                             <LabelTotal id="carrinho_total" variant="h4" align="center"/> 
                             <LabelTotal id="carrinho_total_socio" variant="h4" align="center"/> 
                             <CheckoutButton id="checkout_button" component={Link} to="/checkout" disabled >

@@ -25,37 +25,33 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import ReCAPTCHA from "react-google-recaptcha";
 init("user_OPj3y91OjvXfVjAvC4H6F");
-
-const captchaKey = "6LfBeocaAAAAAF2JY93hxRBaHMaRqpliMNXlZtN9";
-var captchaPassed = false;
 
 const useStyles = makeStyles(styles);
 
 const TextFieldCheckout = withStyles((theme) => ({
     root: {
-        right: "20%",
+        right: "45%",
         '& > *': {
             margin: theme.spacing(1),
             width: '180%',
             color: "#FFFFFF",
         },
         '& label.Mui-focused': {
-            color: 'blue',
+            color: 'green',
         },
         '& .MuiInput-underline:after': {
-            borderBottomColor: 'blue',
+            borderBottomColor: 'green',
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
                 borderColor: 'white',
             },
             '&:hover fieldset': {
-                borderColor: 'blue',
+                borderColor: 'green',
             },
             '&.Mui-focused fieldset': {
-                borderColor: 'blue',
+                borderColor: 'green',
             },
         },
     }
@@ -63,7 +59,7 @@ const TextFieldCheckout = withStyles((theme) => ({
 
 const TextFieldCheckoutMessage = withStyles((theme) => ({
     root: {
-        right: "20%",
+        right: "45%",
         height: "70",
         '& > *': {
 
@@ -72,20 +68,20 @@ const TextFieldCheckoutMessage = withStyles((theme) => ({
             color: "#FFFFFF",
         },
         '& label.Mui-focused': {
-            color: 'blue',
+            color: 'green',
         },
         '& .MuiInput-underline:after': {
-            borderBottomColor: 'blue',
+            borderBottomColor: 'green',
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
                 borderColor: 'white',
             },
             '&:hover fieldset': {
-                borderColor: 'blue',
+                borderColor: 'green',
             },
             '&.Mui-focused fieldset': {
-                borderColor: 'blue',
+                borderColor: 'green',
             },
         },
     }
@@ -94,20 +90,22 @@ const TextFieldCheckoutMessage = withStyles((theme) => ({
 
 const SendButton = withStyles({
     root: {
-        background: "#000000",
-        borderRadius: 3,
-        border: 0,
+        background: "#1DB954",
+        borderRadius: 7,
+        '&:hover': {
+            backgroundColor: "#92d1a8",
+            color: 'white'
+        },
+        '&:focus': {
+            backgroundColor: "#1DB954",
+            color: 'white'
+        },
         color: "white",
-        height: "10%",
-        width: "180%",
-        right: "40%"
+        width: "120%",
+        right: "10%"
     },
 })(Button);
 
-
-function onChangeCaptcha(value) {
-    captchaPassed = true;
-}
 function changeName(e,setErrorNome){ 
     if (e.target.value == ''){
         setErrorNome('Nome não pode estar vazio');
@@ -148,17 +146,21 @@ function changeTelefone(e,setErrorTelefone){
 
 function handleClickOpen(setOpen){
     setOpen(true);
+    document.getElementById("alert_title").innerHTML = "Sucesso"
+    document.getElementById("alert_description").innerHTML = "O seu pedido foi registado com sucesso! Em breve será contactado pela TAOD confirmar a encomenda e proceder ao respetivo pagamento.";
 }
 
-function handleClose(setOpen){
+function handleClose(setOpen,props){
     setOpen(false)
+    if( document.getElementById("alert_title").innerHTML === "Sucesso"){
+        props.history.push('/loja')
+    }
 }
 export default function CheckoutForm(props) {
     const [error_nome,setErrorNome] = React.useState("");
     const [error_email,setErrorEmail] = React.useState("");
     const [error_telefone,setErrorTelefone] = React.useState("");
     const [open, setOpen] = React.useState(false);
-
     const classes = useStyles();
 
     function sendEmail() {
@@ -175,16 +177,12 @@ export default function CheckoutForm(props) {
             handleClickOpen(setOpen)
             return;
         }
-       
-        if(!captchaPassed){
-            handleClickOpen(setOpen)
-            return;
-        }
 
         CheckoutFormValues.itens = getItems();
         send('default_service', 'template_kvzn3jo', CheckoutFormValues)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                handleClickOpen(setOpen)
             }, function (error) {
                 console.log('FAILED...', error);
             });
@@ -195,7 +193,7 @@ export default function CheckoutForm(props) {
     }
 
     return (
-        <div>
+        <div id="checkout_form">
             <HeaderPage change_height={50} />
             <div
                 className={classes.pageHeader}
@@ -226,24 +224,21 @@ export default function CheckoutForm(props) {
                             <TextFieldCheckoutMessage id="mensagem" type='text' name='mensagem' placeholder='Mensagem' label="Mensagem" variant="outlined" 
                             onChange={(e) => { CheckoutFormValues.message = e.target.value }} />
                             <br />
-                            <br />
-                            <ReCAPTCHA badge="inline" size="normal" sitekey={captchaKey} theme="dark" onChange={onChangeCaptcha} />
-                            <br />
                             <SendButton onClick={sendEmail}>Enviar</SendButton>
                         </form>
                     </GridContainer>
                     <Dialog
                         open={open}
                         disableScrollLock 
-                        aria-labelledby="alert-dialog-title"
+                        aria-labelledby="alert_title"
                         aria-describedby="alert_description"
                     >
-                        <DialogTitle id="alert-dialog-title">{"Aviso"}</DialogTitle>
+                        <DialogTitle id="alert_title">Aviso</DialogTitle>
                         <DialogContent>
-                            <DialogContentText id="alert_description">Por favor valide todos os dados e complete o reCaptcha.</DialogContentText>
+                            <DialogContentText id="alert_description">Por favor valide todos os dados e tente outra vez.</DialogContentText>
                         </DialogContent>
                         <DialogActions>
-                            <Button color="primary" onClick={(e) => {handleClose(setOpen)}} autoFocus>
+                            <Button color="primary" onClick={(e) => {handleClose(setOpen,props)}} autoFocus>
                                 Ok
                             </Button>
                         </DialogActions>
