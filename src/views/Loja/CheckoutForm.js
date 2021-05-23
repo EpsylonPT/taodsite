@@ -147,7 +147,7 @@ function changeTelefone(e,setErrorTelefone){
 function handleClickOpen(setOpen){
     setOpen(true);
     document.getElementById("alert_title").innerHTML = "Sucesso"
-    document.getElementById("alert_description").innerHTML = "O seu pedido foi registado com sucesso! Em breve será contactado pela TAOD confirmar a encomenda e proceder ao respetivo pagamento.";
+    document.getElementById("alert_description").innerHTML = "O seu pedido foi registado com sucesso! Em breve será contactado pela TAOD para confirmar a encomenda e proceder ao respetivo pagamento.";
 }
 
 function handleClose(setOpen,props){
