@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53409222a268684c2af0e62fff709e3b",
+    "revision": "08de904175dfd3eee93d17add74dd64e",
     "url": "/taodsite/index.html"
   },
   {
-    "revision": "6a86c59a90ab89e595d9",
-    "url": "/taodsite/static/css/main.9c22699b.chunk.css"
+    "revision": "d345dae6a4bcd68f8cd0",
+    "url": "/taodsite/static/css/main.881691e5.chunk.css"
   },
   {
-    "revision": "0ed5c1785fd1421cc231",
-    "url": "/taodsite/static/js/2.eea372dc.chunk.js"
+    "revision": "ec3521135675e0ad82bd",
+    "url": "/taodsite/static/js/2.97135b82.chunk.js"
   },
   {
     "revision": "0bf38cf6c0b51ec69d7a52e8875a6dbf",
-    "url": "/taodsite/static/js/2.eea372dc.chunk.js.LICENSE.txt"
+    "url": "/taodsite/static/js/2.97135b82.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6a86c59a90ab89e595d9",
-    "url": "/taodsite/static/js/main.ce832225.chunk.js"
+    "revision": "d345dae6a4bcd68f8cd0",
+    "url": "/taodsite/static/js/main.07cd70d5.chunk.js"
   },
   {
     "revision": "9b7f4289563fe7941f19",
