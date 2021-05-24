@@ -34,7 +34,7 @@ export default function Footer(props) {
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made by{" "}
          Tuna Académica de Oliveira do Douro
-         (Comuna e 12)
+         (Gonçalo Ferreira e João Nascimento)
         </div>
       </div>
     </footer>
